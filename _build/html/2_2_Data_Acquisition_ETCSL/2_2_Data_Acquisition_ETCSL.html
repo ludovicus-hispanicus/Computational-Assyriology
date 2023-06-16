@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.2 Data Acquisition ETCSL &#8212; Computational Assyriology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,47 +20,63 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.3 Data Acquisition from CDLI" href="../2_3_Data_Acquisition_CDLI/2_3_Data_Acquisition_CDLI.html" />
     <link rel="prev" title="2.1.4 ORACC JSON: Extended Parser" href="../2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -67,10 +85,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Computational Assyriology</h1>
@@ -79,16 +99,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Welcome to Computational Assyriology
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to Computational Assyriology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_Preliminaries/1_Introduction.html">
    1. Introduction
@@ -213,96 +234,182 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    2.2.1. Introduction
@@ -399,24 +506,138 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2.2 Data Acquisition ETCSL</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   2.2.1. Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xml">
+     2.2.1.1 XML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parsing-xml-xpath-and-lxml">
+     2.2.1.2 Parsing XML: Xpath, and lxml
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parsing-the-xml-tree">
+     2.2.1.3 Parsing the XML Tree
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up">
+   2.2.2 Setting Up
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-packages">
+     2.2.2.1 Import Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-etcsl-and-equivalencies-files">
+     2.2.2.2 Download ETCSL and Equivalencies Files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-processing-html-entities">
+   2.2.3 Pre-processing: HTML-entities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-processing-additional-text-and-secondary-text">
+   2.2.4 Pre-Processing: Additional Text and Secondary Text
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transliteration-conventions">
+   2.2.5 Transliteration Conventions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#replace-etcsl-style-by-oracc-style-lemmatization">
+   2.2.6 Replace ETCSL-style by ORACC-style Lemmatization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting-words">
+   2.2.7 Formatting Words
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting-lines">
+   2.2.8 Formatting Lines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#segments">
+   2.2.9 Segments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versions">
+   2.2.10 Versions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parse-a-text">
+   2.2.11 Parse a Text
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-process">
+   2.2.12 Main Process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-as-csv">
+   2.2.13 Save as CSV
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="data-acquisition-etcsl">
-<span id="id1"></span><h1>2.2 Data Acquisition ETCSL<a class="headerlink" href="#data-acquisition-etcsl" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>2.2.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-acquisition-etcsl">
+<span id="id1"></span><h1>2.2 Data Acquisition ETCSL<a class="headerlink" href="#data-acquisition-etcsl" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>2.2.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>The Electronic Text Corpus of Sumerian Literature (<a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a>) provides editions and translations of 394 Sumerian literary texts, mostly from the Old Babylonian period (around 1800 BCE). The project was founded by Jeremy Black (Oxford University), who sadly passed away in 2004; it was active from 1998 to 2006, when it was archived. Information about the project, its stages, products and collaborators may be found in the project’s <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/edition2/general.php">About</a> page. By the time of its inception <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> was a pioneering effort - the first large digital project in Assyriology, using well-structured data according to the standards and best practices of the time. <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> allows for various kinds of searches in Sumerian and in English translation and provides lemmatization for each individual word. Numerous scholars contributed data sets to the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> project (see <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/edition2/credits.php#ack">Acknowledgements</a>). The availability of <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> has fundamentally altered the study of Sumerian literature and has made this literature available for undergraduate teaching.</p>
-<div class="margin figure align-default" id="id9">
+<figure class="margin align-default" id="id9">
 <img alt="../_images/JeremyBlack.jpg" src="../_images/JeremyBlack.jpg" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://cdli.ox.ac.uk/wiki/doku.php?id=black_jeremy_allen">Jeremy Black</a> 1951-2004</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://cdli.ox.ac.uk/wiki/doku.php?id=black_jeremy_allen">Jeremy Black</a> 1951-2004</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The original <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> files in TEI XML are stored in the <a class="reference external" href="http://hdl.handle.net/20.500.12024/2518">Oxford Text Archive</a> from where they can be downloaded as a ZIP file under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License (<a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">by-nc-sa 3.0</a>). The copyright holders are Jeremy Black, Graham Cunningham, Jarle Ebeling, Esther Flückiger-Hawker, Eleanor Robson, Jon Taylor, and Gábor Zólyomi.</p>
 <p>The <a class="reference external" href="http://hdl.handle.net/20.500.12024/2518">Oxford Text Archive</a> page offers the following description:</p>
 <blockquote>
@@ -427,16 +648,18 @@
 <li><p>the text may not represent the latest standard</p></li>
 <li><p>the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> corpus is extensive - but does not cover all of Sumerian literature known today</p></li>
 </ul>
-<div class="figure align-default" id="id10">
+<figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../_images/P346466.jpg"><img alt="../_images/P346466.jpg" src="../_images/P346466.jpg" style="width: 308.0px; height: 263.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Sumerian literary fragment: <a class="reference external" href="http://cdli.ucla.edu/P346466">UET 6, 427</a> with a few lines of <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.4.1&amp;amp%3Bamp%3Bdisplay=Crit&amp;amp%3Bamp%3Bcharenc=gcirc">Inana’s Descent to the Netherworld</a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Sumerian literary fragment: <a class="reference external" href="http://cdli.ucla.edu/P346466">UET 6, 427</a> with a few lines of <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.4.1&amp;amp%3Bamp%3Bdisplay=Crit&amp;amp%3Bamp%3Bcharenc=gcirc">Inana’s Descent to the Netherworld</a></span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In terms of data acquisition, one way to deal with these limitations is to make the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> data as much as possible compatible with the data standards of the Open Richly Annotated Cuneiform Corpus (<a class="reference external" href="http://oracc.org">ORACC</a>). <a class="reference external" href="http://oracc.org">ORACC</a> is an active project where new or updated editions can be produced. If compatible, if <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> and <a class="reference external" href="http://oracc.org">ORACC</a> data may be freely mixed and matched, then the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> data set can effectively be updated and expanded.</p>
 <p>The <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> text corpus was one of the core data sets for the development of of <a class="reference external" href="http://psd.museum.upenn.edu/">ePSD1</a> and <a class="reference external" href="http://oracc.org/epsd2">ePSD2</a>, and the ePSD version of the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> data forms the core of the literary corpus collected in <a class="reference external" href="http://oracc.org/epsd2/literary">ePSD2/literary</a>. In order to harvest the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> data for <a class="reference external" href="http://oracc.org/epsd2">ePSD2</a> the lemmatization was adapted to <a class="reference external" href="http://oracc.org">ORACC</a> standards and thus the <a class="reference external" href="http://oracc.org/epsd2/literary">ePSD2/literary</a> version of the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> dataset is fully compatible with any <a class="reference external" href="http://oracc.org">ORACC</a> dataset, and can be parsed with the ORACC parser, discussed in section <a class="reference internal" href="../2_1_Data_Acquisition_ORACC/2_1_Data_Acquisition.html#id1"><span class="std std-ref">2.1</span></a>. However, <a class="reference external" href="http://oracc.org/epsd2/literary">ePSD2/literary</a> is not identical with the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> data set. Several compositions have been replaced by more recent editions (for instance the Sumerian disputations edited in the <a class="reference external" href="http://oracc.org">ORACC</a> project <a class="reference external" href="http://oracc.org/dsst">Datenbank Sumerischer Streitliteratur</a>); a significant number of texts that were not available in <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> have been added (many of them published after 2006) and the Gudea Cylinders have been moved to <a class="reference external" href="http://oracc.org/epsd2/royal/Q000377">epsd2/royal</a>, where they more properly belong.</p>
 <p>For some applications, therefore, parsing the original <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> XML TEI files has become redundant since a fuller and more up-to-date version of the data set is available in <a class="reference external" href="http://oracc.org/epsd2/literary">epsd2/literary</a>. . However, any data transformation implies choices and it is hard to know what the needs will be of future computational approaches to the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> dataset. The reason to include and discuss the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> parser here is, first, to offer users the opportunity to work with the original data set. The various transformations included in the current parser may be adapted and adjusted to reflect the preferences and research questions of the user. As a concrete example of choices to be made, <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> distinguishes between main text, secondary text, and additional text, to reflect different types of variants between manuscripts (see below <a class="reference internal" href="#id4"><span class="std std-ref">2.2.4</span></a>). The <a class="reference external" href="http://oracc.org/epsd2/literary">ePSD2/literary</a> data set does not include this distinction. The output of the current parser will indicate for each word whether it is “secondary” or “additional” (according to <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> criteria) and offer the possibility to include such words or exclude them from the analysis. Similarly, the translations are not included in the <a class="reference external" href="http://oracc.org/epsd2/literary">ePSD2/literary</a> dataset, nor are they considered by the present parser. Translation data are, however, available in the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> XML TEI file set and the XML of the transcription files marks the beginning and end of translation paragraphs. Such data, therefore, is available and one may well imagine research questions for which the translation files are relevant (e.g. translation alignment). Although the present code does not deal with translation, one may use the same techniques and the same approach exemplified here to retrieve such data.</p>
 <p>In order to achieve compatibility between <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> and <a class="reference external" href="http://oracc.org">ORACC</a> the code uses a number of equivalency dictionaries, that enable replacement of characters, words, or names. These equivalency dictionaries are made available in JSON format (for JSON see section <a class="reference internal" href="../2_1_Data_Acquisition_ORACC/2_1_1_JSON.html#id1"><span class="std std-ref">2.1.1</span></a> in the file <code class="docutils literal notranslate"><span class="pre">equivalencies.json</span></code> in the directory <code class="docutils literal notranslate"><span class="pre">equivalencies</span></code>.</p>
-<div class="section" id="xml">
-<h3>2.2.1.1 XML<a class="headerlink" href="#xml" title="Permalink to this headline">¶</a></h3>
+<section id="xml">
+<h3>2.2.1.1 XML<a class="headerlink" href="#xml" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> files as distributed by the <a class="reference external" href="http://hdl.handle.net/20.500.12024/2518">Oxford Text Archive</a> are encoded in a dialect of XML (Extensible Markup Language) that is referred to as <code class="docutils literal notranslate"><span class="pre">TEI</span></code> (Text Encoding Initiative). In this encoding each word (in transliteration) is an <em>element</em> that is surrounded by <code class="docutils literal notranslate"><span class="pre">&lt;w&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;/w&gt;</span></code> tags. Inside the start-tag the word may receive several attributes, encoded as name/value pairs, as in the following random examples:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;w</span> <span class="na">form=</span><span class="s">&quot;ti-a&quot;</span> <span class="na">lemma=</span><span class="s">&quot;te&quot;</span> <span class="na">pos=</span><span class="s">&quot;V&quot;</span> <span class="na">label=</span><span class="s">&quot;to approach&quot;</span><span class="nt">&gt;</span>ti-a<span class="nt">&lt;/w&gt;</span>
 <span class="nt">&lt;w</span> <span class="na">form=</span><span class="s">&quot;e2-jar8-bi&quot;</span> <span class="na">lemma=</span><span class="s">&quot;e2-jar8&quot;</span> <span class="na">pos=</span><span class="s">&quot;N&quot;</span> <span class="na">label=</span><span class="s">&quot;wall&quot;</span><span class="nt">&gt;</span>e2-jar8-bi<span class="nt">&lt;/w&gt;</span>
@@ -487,13 +710,13 @@
 <p>In parsing the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> files we will be looking for the <code class="docutils literal notranslate"><span class="pre">&lt;w&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;/w&gt;</span></code> tags to isolate words and their attributes. Higher level tags identify lines (<code class="docutils literal notranslate"><span class="pre">&lt;l&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;/l&gt;</span></code>), versions, secondary text (found only in a minority of sources), etcetera. The XML data structure is hierarchical and may be represented as a tree with a trunk, main branches, and ever smaller branches that all, eventually, connect to the same tree.</p>
 <p>The <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> file set includes the file <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/edition2/etcslmanual.php">etcslmanual.html</a> with explanations of the tags, their attributes, and their proper usage.</p>
 <p>Goal of the parsing process is to get as much information as possible out of the XML tree in a format that is as close as possible to the output of the <a class="reference external" href="http://oracc.org/">ORACC</a> parser. The output of the parser is a word-by-word (or rather lemma-by-lemma) representation of the entire <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> corpus. For most computational projects it will be necessary to group words into lines or compositions, or to separate out a particular group of compositions. The data is structured in such a way that that can be achieved with a standard set of Python functions of the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library.</p>
-</div>
-<div class="section" id="parsing-xml-xpath-and-lxml">
-<h3>2.2.1.2 Parsing XML: Xpath, and lxml<a class="headerlink" href="#parsing-xml-xpath-and-lxml" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+</section>
+<section id="parsing-xml-xpath-and-lxml">
+<h3>2.2.1.2 Parsing XML: Xpath, and lxml<a class="headerlink" href="#parsing-xml-xpath-and-lxml" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For proper introductions to <code class="docutils literal notranslate"><span class="pre">Xpath</span></code> and <code class="docutils literal notranslate"><span class="pre">lxml</span></code> see the <a class="reference external" href="https://en.wikipedia.org/wiki/XPath">Wikipedia</a> article on <code class="docutils literal notranslate"><span class="pre">Xpath</span></code> and the homepage of the <a class="reference external" href="https://lxml.de/">lxml</a> library, respectively.</p>
-</div>
+</aside>
 <p>There are several Python libraries specifically for parsing XML, among them the popular <code class="docutils literal notranslate"><span class="pre">ElementTree</span></code> and its twin <code class="docutils literal notranslate"><span class="pre">cElementTree</span></code>. The library <code class="docutils literal notranslate"><span class="pre">lxml</span></code> is largely compatible with <code class="docutils literal notranslate"><span class="pre">ElementTree</span></code> and <code class="docutils literal notranslate"><span class="pre">cElementTree</span></code> but differs from those in its full support of <code class="docutils literal notranslate"><span class="pre">Xpath</span></code>. <code class="docutils literal notranslate"><span class="pre">Xpath</span></code> is a language for finding and retrieving elements and attributes in XML trees. <code class="docutils literal notranslate"><span class="pre">Xpath</span></code> is not a program or a library, but a set of specifications that is implemented in a variety of software packages in different programming languages.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Xpath</span></code> uses the forward slash to describe a path through the hierarchy of the XML tree. The expression <code class="docutils literal notranslate"><span class="pre">&quot;/body/l/w&quot;</span></code> refers to all the <code class="docutils literal notranslate"><span class="pre">w</span></code> (word) elements that are children of <code class="docutils literal notranslate"><span class="pre">l</span></code> (line) elements that are children of the <code class="docutils literal notranslate"><span class="pre">body</span></code> element in the top level of XML hierarchy.</p>
 <p>The expression <code class="docutils literal notranslate"><span class="pre">'//w'</span></code>means: all the <code class="docutils literal notranslate"><span class="pre">w</span></code> nodes, wherever in the hierarchy of the XML tree. The expression may be used to create a list of all the <code class="docutils literal notranslate"><span class="pre">w</span></code> nodes with all of their associated attributes. The attributes of a node are addressed  with the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> sign, so that <code class="docutils literal notranslate"><span class="pre">//w/&#64;label</span></code> refers to the <code class="docutils literal notranslate"><span class="pre">label</span></code> attributes of all the <code class="docutils literal notranslate"><span class="pre">w</span></code> nodes at any level in the hierarchy.</p>
@@ -513,9 +736,9 @@
 </pre></div>
 </div>
 <p>The dot, the argument to the <code class="docutils literal notranslate"><span class="pre">string()</span></code> function in <code class="docutils literal notranslate"><span class="pre">node.xpath('string(.)')</span></code>, refers to the current node.</p>
-</div>
-<div class="section" id="parsing-the-xml-tree">
-<h3>2.2.1.3 Parsing the XML Tree<a class="headerlink" href="#parsing-the-xml-tree" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="parsing-the-xml-tree">
+<h3>2.2.1.3 Parsing the XML Tree<a class="headerlink" href="#parsing-the-xml-tree" title="Permalink to this headline">#</a></h3>
 <p>The module <code class="docutils literal notranslate"><span class="pre">etree</span></code> from the <code class="docutils literal notranslate"><span class="pre">lxml</span></code> library is used to parse the XML files. The code basically works from the highest level of the hierarchy of the XML tree to the lowest, in the following way:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">corpus</span>									<span class="n">main</span> <span class="n">process</span>
 	<span class="n">text</span>								<span class="n">parsetext</span><span class="p">()</span>
@@ -555,16 +778,16 @@
 <p class="admonition-title">Note</p>
 <p>The logic of the entire process goes from <code class="docutils literal notranslate"><span class="pre">parsetext()</span></code> via <code class="docutils literal notranslate"><span class="pre">getversion()</span></code> etc. down to <code class="docutils literal notranslate"><span class="pre">etcsl_to</span> <span class="pre">_oracc()</span></code>. Each of these functions calls the next one and since a function cannot be called before it is defined, we have to define the last function first and deal with them in the opposite order.</p>
 </div>
-</div>
-</div>
-<div class="section" id="setting-up">
-<h2>2.2.2 Setting Up<a class="headerlink" href="#setting-up" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="import-packages">
-<h3>2.2.2.1 Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+</section>
+</section>
+<section id="setting-up">
+<h2>2.2.2 Setting Up<a class="headerlink" href="#setting-up" title="Permalink to this headline">#</a></h2>
+<section id="import-packages">
+<h3>2.2.2.1 Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For proper installation of packages for a Jupyter Notebook see <a class="reference internal" href="../1_Preliminaries/1_Introduction.html#id3"><span class="std std-ref">1.4.3 install_packages</span></a>.</p>
-</div>
+</aside>
 <p>Before running this cell you may need to install the package <code class="docutils literal notranslate"><span class="pre">lxml</span></code> (for parsing XML) by running</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">conda</span> <span class="n">install</span> <span class="n">lxml</span>
 </pre></div>
@@ -607,9 +830,9 @@ The output is saved in the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="download-etcsl-and-equivalencies-files">
-<span id="id2"></span><h3>2.2.2.2 Download ETCSL and Equivalencies Files<a class="headerlink" href="#download-etcsl-and-equivalencies-files" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="download-etcsl-and-equivalencies-files">
+<span id="id2"></span><h3>2.2.2.2 Download ETCSL and Equivalencies Files<a class="headerlink" href="#download-etcsl-and-equivalencies-files" title="Permalink to this headline">#</a></h3>
 <p>The ETCSL files are downloaded in a <code class="docutils literal notranslate"><span class="pre">zip</span></code> file from the <a class="reference external" href="http://hdl.handle.net/20.500.12024/2518">Oxford Text Archive</a>. For the code, see section <a class="reference internal" href="../2_1_Data_Acquisition_ORACC/2_1_0_download_ORACC-JSON.html#id1"><span class="std std-ref">2.1.0</span></a>.</p>
 <p>The file <code class="docutils literal notranslate"><span class="pre">equivalencies.json</span></code> is found in the <a class="reference external" href="https://github.com/niekveldhuis/compass">Compass</a> project on GitHub. It contains a number of dictionaries that will be used to search and replace at various places in this notebook. The dictionaries are:</p>
 <ul class="simple">
@@ -662,32 +885,32 @@ The output is saved in the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="pre-processing-html-entities">
-<span id="id3"></span><h2>2.2.3 Pre-processing: HTML-entities<a class="headerlink" href="#pre-processing-html-entities" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="pre-processing-html-entities">
+<span id="id3"></span><h2>2.2.3 Pre-processing: HTML-entities<a class="headerlink" href="#pre-processing-html-entities" title="Permalink to this headline">#</a></h2>
 <p>Before the XML files can be parsed, it is necessary to remove character sequences that are not allowed in XML proper (so-called HTML entities).</p>
 <p>In non-transliteration contexts (bibliographies, composition titles, etc.) <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a> uses so-called HTML entities to represent non-ASCII characters such as,  á, ü, or š. These entities are encoded with an opening ampersand (<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>) and a closing semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>). For instance, <code class="docutils literal notranslate"><span class="pre">&amp;C;</span></code> represents the character <code class="docutils literal notranslate"><span class="pre">Š</span></code>. The HTML entities are for the most part project-specific and are declared in the file <code class="docutils literal notranslate"><span class="pre">etcsl-sux.ent</span></code> which is part of the file package and is used by the <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a> project in the process of validating and parsing the XML for on-line publication.</p>
 <p>For purposes of data acquisition these entities need to be resolved, because XML parsers will not recognize these sequences as valid XML.</p>
 <p>The key <code class="docutils literal notranslate"><span class="pre">ampersands</span></code> in the file <code class="docutils literal notranslate"><span class="pre">equivalencies.json</span></code> has as its value a dictionary, listing all the HTML entities that appear in the <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a> files with their Unicode counterparts:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> 
- <span class="nt">&quot;&amp;C;&quot;</span><span class="p">:</span> <span class="s2">&quot;Š&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;Ccedil;&quot;</span><span class="p">:</span> <span class="s2">&quot;Ç&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;Eacute;&quot;</span><span class="p">:</span> <span class="s2">&quot;É&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;G;&quot;</span><span class="p">:</span> <span class="s2">&quot;Ŋ&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;H;&quot;</span><span class="p">:</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;Imacr;&quot;</span><span class="p">:</span> <span class="s2">&quot;Î&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;X;&quot;</span> <span class="p">:</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span>
- <span class="nt">&quot;&amp;aacute;&quot;</span><span class="p">:</span> <span class="s2">&quot;á&quot;</span>
-<span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span>
+<span class="w"> </span><span class="nt">&quot;&amp;C;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Š&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;Ccedil;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ç&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;Eacute;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;É&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;G;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ŋ&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;H;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;Imacr;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Î&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;X;&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;&amp;aacute;&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;á&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>etc.</p>
 <p>This dictionary is used to replace each HTML entity with its unicode counterpart in the entire corpus.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>The regular expression <code class="docutils literal notranslate"><span class="pre">[^;]+</span></code> means: a sequence of one or more (<code class="docutils literal notranslate"><span class="pre">+</span></code>) characters, except the semicolon. The symbol <code class="docutils literal notranslate"><span class="pre">^</span></code> is the negation symbol in regular expressions. The expression <code class="docutils literal notranslate"><span class="pre">&amp;[^;]+;</span></code> therefore captures a sequence of any length that begins with an ampersand and ends with a semicolon. There are many introductions for regular expressions on the web, for instance <a class="reference external" href="https://www.regular-expressions.info/">regular-expressions.info</a>, or <a class="reference external" href="https://www.oreilly.com/content/an-introduction-to-regular-expressions/">An Introduction to Regular Expressions</a> by Thomas Nield.</p>
-</div>
+</aside>
 <p>The function <code class="docutils literal notranslate"><span class="pre">ampersands()</span></code> is called in <code class="docutils literal notranslate"><span class="pre">parsetext()</span></code> (see section <a class="reference internal" href="#id7"><span class="std std-ref">2.2.11</span></a> before the <code class="docutils literal notranslate"><span class="pre">etree</span></code> is built. The function uses the <code class="docutils literal notranslate"><span class="pre">sub()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">re</span></code> (Regular Expressions) module. The arguments of this function are <code class="docutils literal notranslate"><span class="pre">sub(find_what,</span> <span class="pre">replace_with,</span> <span class="pre">text)</span></code>. In this case, the <code class="docutils literal notranslate"><span class="pre">find_what</span></code> is the compiled regular expression <code class="docutils literal notranslate"><span class="pre">amp</span></code>, matching all character sequences that begin with &amp; and end with a semicolon (;). This regular expression is defined in the main process (see section <a class="reference internal" href="#id8"><span class="std std-ref">2.2.12</span></a> as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">amp</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&amp;[^;]+;&#39;</span><span class="p">)</span>
 </pre></div>
@@ -703,9 +926,9 @@ The output is saved in the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="pre-processing-additional-text-and-secondary-text">
-<span id="id4"></span><h2>2.2.4 Pre-Processing: Additional Text and Secondary Text<a class="headerlink" href="#pre-processing-additional-text-and-secondary-text" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pre-processing-additional-text-and-secondary-text">
+<span id="id4"></span><h2>2.2.4 Pre-Processing: Additional Text and Secondary Text<a class="headerlink" href="#pre-processing-additional-text-and-secondary-text" title="Permalink to this headline">#</a></h2>
 <p>In order to be able to preserve the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> distinctions between main text (the default), secondary text, and additional text, such information needs to be added as an attribute to each <code class="docutils literal notranslate"><span class="pre">w</span></code> node (word node). This must take place in pre-processing, before the XML file is parsed.</p>
 <p><a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> transliterations represent composite texts, put together (in most cases) from multiple exemplars. The editions include substantive variants, which are marked either as “additional” or as “secondary”. Additional text consists of words or lines that are <em>added</em> to the text in a minority of sources. In the opening passage of <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.4.1&amp;amp%3Bamp%3Bdisplay=Crit&amp;amp%3Bamp%3Bcharenc=gcirc">Inana’s Descent to the Netherworld</a>, for instance, there is a list of temples that Inana leaves behind. One exemplar extends this list with eight more temples; in the composite text these lines are marked as “additional” and numbered lines 13A-13H. Secondary text, on the other hand, is variant text (words or lines) that are found in a minority of sources <em>instead of</em> the primary text. An example in <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.4.1&amp;amp%3Bamp%3Bdisplay=Crit&amp;amp%3Bamp%3Bcharenc=gcirc">Inana’s Descent to the Netherworld</a> is lines 30-31, which are replaced by 30A-31A in one manuscript (text and translation from <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a>):</p>
 <table class="colwidths-auto table">
@@ -772,19 +995,19 @@ The output is saved in the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="transliteration-conventions">
-<span id="id5"></span><h2>2.2.5 Transliteration Conventions<a class="headerlink" href="#transliteration-conventions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="transliteration-conventions">
+<span id="id5"></span><h2>2.2.5 Transliteration Conventions<a class="headerlink" href="#transliteration-conventions" title="Permalink to this headline">#</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">tounicode()</span></code> is called in the function <code class="docutils literal notranslate"><span class="pre">getword()</span></code> to format Citation Forms and Forms (transliteration). It changes ‘c’ into  ‘š’, ‘j’ into ‘ŋ’, ‘e2’ into ‘e₂’, etc. This is done in two steps. First sign index numbers are changed from regular numbers into Unicode index numbers (du3 &gt; du₃). The replacement of sign index numbers is complicated by the fact that Citation Form and Form may include real numbers, as in 7-ta-am3 (“seven each”) where the 7 should remain unchanged, while am3 should become am₃. The replacement routine for numbers uses a regular expression to search for a letter immediately followed by one or two digits. The regular expression and the accompanying translation table <code class="docutils literal notranslate"><span class="pre">transind</span></code> are defined in the main process (see <a class="reference internal" href="#id8"><span class="std std-ref">2.2.12</span></a>), as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ind</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[a-zŋḫṣšṭA-ZŊḪṢŠṬ][0-9x]{1,2}&#39;</span><span class="p">)</span>
 <span class="n">ascind</span><span class="p">,</span> <span class="n">uniind</span> <span class="o">=</span> <span class="s1">&#39;0123456789x&#39;</span><span class="p">,</span> <span class="s1">&#39;₀₁₂₃₄₅₆₇₈₉ₓ&#39;</span>
 <span class="n">transind</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="n">ascind</span><span class="p">,</span> <span class="n">uniind</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>In this case it is not necessary to define a so-called look-behind in the regular expression <code class="docutils literal notranslate"><span class="pre">ind</span></code>. The match of <code class="docutils literal notranslate"><span class="pre">ind</span></code> includes the letter that precedes the index number, but since the translation table only has digits, this letter is returned unchanged.</p>
-</div>
+</aside>
 <p>The replacement code uses the <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code> function with a temporary lambda function to translate the regular digits into their Unicode subscript counterparts. Using a function in <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code> was discussed above in section <a class="reference internal" href="#id3"><span class="std std-ref">2.2.3</span></a>:</p>
 <p>Finally,  <code class="docutils literal notranslate"><span class="pre">tounicode()</span></code> uses another <code class="docutils literal notranslate"><span class="pre">translate()</span></code> call to replace ‘c’ by ‘š’, ‘j’ by ‘ŋ’, etc, using the table <code class="docutils literal notranslate"><span class="pre">transcj</span></code> which is also created in the main process.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">asccj</span><span class="p">,</span> <span class="n">unicj</span> <span class="o">=</span> <span class="s1">&#39;cjCJ&#39;</span><span class="p">,</span> <span class="s1">&#39;šŋŠŊ&#39;</span>
@@ -802,34 +1025,34 @@ The output is saved in the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="replace-etcsl-style-by-oracc-style-lemmatization">
-<span id="id6"></span><h2>2.2.6 Replace ETCSL-style by ORACC-style Lemmatization<a class="headerlink" href="#replace-etcsl-style-by-oracc-style-lemmatization" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="replace-etcsl-style-by-oracc-style-lemmatization">
+<span id="id6"></span><h2>2.2.6 Replace ETCSL-style by ORACC-style Lemmatization<a class="headerlink" href="#replace-etcsl-style-by-oracc-style-lemmatization" title="Permalink to this headline">#</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">etcsl_to_oracc()</span></code> is called in the function <code class="docutils literal notranslate"><span class="pre">getword()</span></code> with a single argument: the dictionary <code class="docutils literal notranslate"><span class="pre">word</span></code>. This dictionary contains, besides meta data, the citation form, basic meaning (‘label’) and Part of Speech of a single word in ETCSL-style. The function will look up each lemma (a combination of Citation Form, Guide Word, and Part of Speech) in the dictionary <code class="docutils literal notranslate"><span class="pre">equiv</span></code>. This dictionary is a combination of three dictionaries in the file <code class="docutils literal notranslate"><span class="pre">equivalencies.json</span></code>, namely <code class="docutils literal notranslate"><span class="pre">suxwords</span></code>, <code class="docutils literal notranslate"><span class="pre">emesalwords</span></code> and <code class="docutils literal notranslate"><span class="pre">propernouns</span></code> (see <a class="reference internal" href="#id2"><span class="std std-ref">2.2.2.2</span></a>). If the lemma is found in <code class="docutils literal notranslate"><span class="pre">equiv</span></code>, the <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a> ‘cf’, ‘gw’, and ‘pos’ are replaced by their <a class="reference external" href="http://oracc.org/">ORACC</a> counterparts.
 In the <code class="docutils literal notranslate"><span class="pre">equiv</span></code> dictionary the lemmas are stored in the following format:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;taka₄[to leave behind]V&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;gw&quot;</span><span class="p">:</span> <span class="s2">&quot;abandon&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;V/t&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cf&quot;</span><span class="p">:</span> <span class="s2">&quot;taka&quot;</span>
-        <span class="p">},</span>
- <span class="nt">&quot;me-te-ŋal₂[seemly]AJ&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;gw&quot;</span><span class="p">:</span> <span class="s2">&quot;seemly&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;AJ&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;cf&quot;</span><span class="p">:</span> <span class="s2">&quot;meteŋal&quot;</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;taka₄[to leave behind]V&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gw&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abandon&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;V/t&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;cf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;taka&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;me-te-ŋal₂[seemly]AJ&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gw&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;seemly&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AJ&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;cf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;meteŋal&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The keys in this dictionary are combinations of ‘cf’, ‘gw’, and ‘pos’ (<a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a>-style) in a single string. The <code class="docutils literal notranslate"><span class="pre">etcsl_to_oracc()</span></code> function, therefore first has to create the <code class="docutils literal notranslate"><span class="pre">lemma</span></code> from the fields <code class="docutils literal notranslate"><span class="pre">cf</span></code>, <code class="docutils literal notranslate"><span class="pre">gw</span></code>, and <code class="docutils literal notranslate"><span class="pre">pos</span></code> before it can look the word up in <code class="docutils literal notranslate"><span class="pre">equiv</span></code>.</p>
 <p>In a few cases a single word in <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a> is represented by a sequence of two words in <a class="reference external" href="http://oracc.org/epsd2">ePSD2</a> style. This is represented as follows in the <code class="docutils literal notranslate"><span class="pre">equiv</span></code> dictionary:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span><span class="nt">&quot;maš₂-sa-la₂[bug-ridden goat]N&quot;</span><span class="p">:</span> <span class="p">{</span>
-     		<span class="nt">&quot;cf&quot;</span><span class="p">:</span> <span class="s2">&quot;maš&quot;</span><span class="p">,</span>
-     		<span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-     		<span class="nt">&quot;gw&quot;</span><span class="p">:</span> <span class="s2">&quot;goat&quot;</span><span class="p">,</span>
-     		<span class="nt">&quot;cf2&quot;</span><span class="p">:</span> <span class="s2">&quot;sala&quot;</span><span class="p">,</span>
-     		<span class="nt">&quot;pos2&quot;</span><span class="p">:</span> <span class="s2">&quot;AJ&quot;</span><span class="p">,</span>
-     		<span class="nt">&quot;gw2&quot;</span><span class="p">:</span> <span class="s2">&quot;bug-ridden&quot;</span> 
-        <span class="p">},}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;maš₂-sa-la₂[bug-ridden goat]N&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">     		</span><span class="nt">&quot;cf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;maš&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     		</span><span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     		</span><span class="nt">&quot;gw&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;goat&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     		</span><span class="nt">&quot;cf2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     		</span><span class="nt">&quot;pos2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AJ&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     		</span><span class="nt">&quot;gw2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bug-ridden&quot;</span><span class="w"> </span>
+<span class="w">        </span><span class="p">},}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The code checks for the existence of a <code class="docutils literal notranslate"><span class="pre">cf2</span></code> key. If present, a new dictionary is created (<code class="docutils literal notranslate"><span class="pre">word2</span></code>) and both dictionaries (<code class="docutils literal notranslate"><span class="pre">word</span></code> and <code class="docutils literal notranslate"><span class="pre">word2</span></code>) are appended to the list <code class="docutils literal notranslate"><span class="pre">alltexts</span></code>.</p>
@@ -856,15 +1079,15 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="formatting-words">
-<h2>2.2.7 Formatting Words<a class="headerlink" href="#formatting-words" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="formatting-words">
+<h2>2.2.7 Formatting Words<a class="headerlink" href="#formatting-words" title="Permalink to this headline">#</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">getword()</span></code>, which is called by the function <code class="docutils literal notranslate"><span class="pre">getline()</span></code>,  is the most complex of the series of functions that parses the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> data. This is the case because different types of words (regular Sumerian words, proper nouns, Emesal words, Akkadian glosses) are processed in different ways.</p>
 <p>As a first step <code class="docutils literal notranslate"><span class="pre">getword()</span></code> will copy all the meta-data from the dictionary <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> into the dictionary <code class="docutils literal notranslate"><span class="pre">word</span></code>. This dictionary will hold all the data for one individual word token.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For Akkadian glosses in Sumerian literary texts, see Szilvia Sövegjártó, <a class="reference external" href="https://www.zaphon.de/sumerische-glossenhandschriften/en"><em>Sumerische Glossenhandschriften als Quellen des altbabylonischen hermeneutischen Denkens</em></a> (2020).</p>
-</div>
+</aside>
 <p>If <code class="docutils literal notranslate"><span class="pre">getword()</span></code> receives a <code class="docutils literal notranslate"><span class="pre">gloss</span></code> node, this node represents either an Akkadian word, or an entire Akkadian phrase or sentence, that is inserted in a Sumerian text as a translation gloss. Akkadian words are not lemmatized in <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a>, so all we can collect is the <code class="docutils literal notranslate"><span class="pre">form</span></code> (the transliteration) and the language. These fields are added to the <code class="docutils literal notranslate"><span class="pre">word</span></code> dictionary, <code class="docutils literal notranslate"><span class="pre">word</span></code> is appended to the list <code class="docutils literal notranslate"><span class="pre">alltexts</span></code> and control is returned to the previous function (<code class="docutils literal notranslate"><span class="pre">getline()</span></code>), which will send the next word.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">getword()</span></code> receives a <code class="docutils literal notranslate"><span class="pre">w</span></code> node (a word) it will assign different attributes of that node to different fields in the <code class="docutils literal notranslate"><span class="pre">word</span></code> dictionary. The Citation Form (‘cf’) is found in the attribute <code class="docutils literal notranslate"><span class="pre">lemma</span></code>; the Guide Word (‘gw’) is found in the attribute <code class="docutils literal notranslate"><span class="pre">label</span></code>; and the Part of Speech (‘pos’) in the attribute <code class="docutils literal notranslate"><span class="pre">pos</span></code>.</p>
 <div class="tip dropdown admonition">
@@ -957,9 +1180,9 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="formatting-lines">
-<h2>2.2.8 Formatting Lines<a class="headerlink" href="#formatting-lines" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="formatting-lines">
+<h2>2.2.8 Formatting Lines<a class="headerlink" href="#formatting-lines" title="Permalink to this headline">#</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">getline()</span></code> is called by <code class="docutils literal notranslate"><span class="pre">getsegment()</span></code>. It first updates the field <code class="docutils literal notranslate"><span class="pre">id_line</span></code> in <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>, increasing it by 1. The data type of <code class="docutils literal notranslate"><span class="pre">id_line</span></code> is integer - it is used to keep lines and gaps in correct order.</p>
 <p>A line may either be an actual line (in Sumerian and/or Akkadian) or a gap (a portion of text lost). Both receive a line reference (<code class="docutils literal notranslate"><span class="pre">id_line</span></code>).</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">getline()</span></code> receives an <code class="docutils literal notranslate"><span class="pre">l</span></code> node (a line) it will collect <code class="docutils literal notranslate"><span class="pre">w</span></code> nodes (words) and <code class="docutils literal notranslate"><span class="pre">gloss</span></code> nodes with the language attribute <code class="docutils literal notranslate"><span class="pre">akk</span></code>. The <code class="docutils literal notranslate"><span class="pre">Xpath</span></code> expression looks as follows: ‘.//w|.//gloss[&#64;lang=”akk”]’. The “pipe” symbol (|) is a logical “or” - the condition looks for either a <code class="docutils literal notranslate"><span class="pre">w</span></code> tag or a <code class="docutils literal notranslate"><span class="pre">gloss</span></code> tag with a <code class="docutils literal notranslate"><span class="pre">lang</span></code> attribute that equals “akk”. This will find Sumerian words and Akkadian glosses.</p>
@@ -991,14 +1214,16 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="segments">
-<h2>2.2.9 Segments<a class="headerlink" href="#segments" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="segments">
+<h2>2.2.9 Segments<a class="headerlink" href="#segments" title="Permalink to this headline">#</a></h2>
 <p>Some compositions in <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> are divided into segments. That is the case, in particular, when a composition has gaps of unknown length. Segment B supposedly follows segment A, but how much text is missing between them cannot be reconstructed. This is the case, for instance, in <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.8.1.3&amp;display=Crit&amp;charenc=gcirc">The Death of Gilgameš</a>, which is rather fragmentarily preserved.</p>
-<div class="figure align-default" id="id11">
+<figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../_images/P264388.jpg"><img alt="../_images/P264388.jpg" src="../_images/P264388.jpg" style="width: 424.25px; height: 325.5px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text"><a class="reference external" href="http://cdli.ucla.edu/P264388">UM 29-16-086</a>: fragments of the <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.8.1.3&amp;display=Crit&amp;charenc=gcirc">Death of Gilgameš: Nippur version</a>.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><a class="reference external" href="http://cdli.ucla.edu/P264388">UM 29-16-086</a>: fragments of the <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.8.1.3&amp;display=Crit&amp;charenc=gcirc">Death of Gilgameš: Nippur version</a>.</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The function <code class="docutils literal notranslate"><span class="pre">getsegment()</span></code> is called by <code class="docutils literal notranslate"><span class="pre">getversion()</span></code> and receives the arguments <code class="docutils literal notranslate"><span class="pre">tree</span></code> (the <code class="docutils literal notranslate"><span class="pre">etree</span></code> object representing one version of the composition) and <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> (the dictionary of meta data). The function <code class="docutils literal notranslate"><span class="pre">getsegment()</span></code> first checks to see whether a sub-division into segments is present.</p>
 <p>Segments are indicated in the XML with a node <code class="docutils literal notranslate"><span class="pre">div1</span></code> with the attribute <code class="docutils literal notranslate"><span class="pre">type=&quot;segment&quot;</span></code>. Segment names (usually a capital letter) are found in an attribute of <code class="docutils literal notranslate"><span class="pre">div1</span></code> called <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <div class="tip dropdown admonition">
@@ -1041,18 +1266,20 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="versions">
-<h2>2.2.10 Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="versions">
+<h2>2.2.10 Versions<a class="headerlink" href="#versions" title="Permalink to this headline">#</a></h2>
 <p>In some cases an <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> file contains different versions of the same composition. The versions may be distinguished as ‘Version A’ vs. ‘Version B’ or may indicate the provenance of the version (‘A version from Urim’ vs. ‘A version from Nibru’). In the edition of the proverbs the same mechanism is used to identify tablets (often lentils) that contain just one proverb, or a few, and are collected in the files “Proverbs from Urim,” “Proverbs from Nibru,” etc. (<a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> c.6.2.1 - c.6.2.5).</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>This lentil is edited in the collection <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.6.2.3&amp;display=Crit&amp;charenc=gcirc">Proverbs from Urim</a> “If bread is left over, the mongoose eats it. If I have bread left over, a stranger consumes it.” (translation <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a>).</p>
-</div>
-<div class="figure align-default" id="id12">
+</aside>
+<figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../_images/P346317.jpg"><img alt="../_images/P346317.jpg" src="../_images/P346317.jpg" style="width: 353.75px; height: 351.5px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text"><a class="reference external" href="http://oracc.org/epsd2/P346317">UET 6/2 239</a>: lentil from Ur with a <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.6.2.3&amp;display=Crit&amp;charenc=gcirc">proverb</a>.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><a class="reference external" href="http://oracc.org/epsd2/P346317">UET 6/2 239</a>: lentil from Ur with a <a class="reference external" href="http://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.6.2.3&amp;display=Crit&amp;charenc=gcirc">proverb</a>.</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The function <code class="docutils literal notranslate"><span class="pre">getversion()</span></code> is called by the function <code class="docutils literal notranslate"><span class="pre">parsetext()</span></code> and receives two arguments: <code class="docutils literal notranslate"><span class="pre">tree</span></code> (the <code class="docutils literal notranslate"><span class="pre">etree</span></code> object) and <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> (the dictionary of meta data). In the XML tree versions are marked by a node <code class="docutils literal notranslate"><span class="pre">body</span></code> with a child <code class="docutils literal notranslate"><span class="pre">head</span></code>. The node <code class="docutils literal notranslate"><span class="pre">head</span></code> contains the name of the version. Iterating through the versions, the function updates the key “version” in <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> with the name of that version and then calls the <code class="docutils literal notranslate"><span class="pre">getsegment()</span></code> function. The first argument is the portion of the tree that represents the version that is being parsed, the second argument is <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>. If a composition is not divided into versions the entire tree is passed to <code class="docutils literal notranslate"><span class="pre">getsegment()</span></code> and the version name in <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> is the empty string.</p>
 <p>In some cases version names are very long and somewhat unwieldy. For instance, <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.2.1.5&amp;display=Crit&amp;charenc=gcirc">The Cursing of Agade</a> has a version that is called “Fragments of an earlier version from Nibru, dating to the Ur III period.” This version name is abbreviated to “Ur III”. The equivalency list <code class="docutils literal notranslate"><span class="pre">versions</span></code> (in <code class="docutils literal notranslate"><span class="pre">equivalencies/equivalencies.json</span></code>; see <a class="reference internal" href="#id2"><span class="std std-ref">2.2.2.2</span></a>) is used to adjust version names.</p>
 <div class="cell docutils container">
@@ -1075,9 +1302,9 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="parse-a-text">
-<span id="id7"></span><h2>2.2.11 Parse a Text<a class="headerlink" href="#parse-a-text" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="parse-a-text">
+<span id="id7"></span><h2>2.2.11 Parse a Text<a class="headerlink" href="#parse-a-text" title="Permalink to this headline">#</a></h2>
 <p>The main process iterates through the list of XML files (one for each composition in <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a>) and calls for each of them the function <code class="docutils literal notranslate"><span class="pre">parsetext()</span></code>. After opening the XML file <code class="docutils literal notranslate"><span class="pre">parsetext()</span></code> first calls the function <code class="docutils literal notranslate"><span class="pre">ampersands()</span></code> in order to replace HTML entities by their unicode counterparts (<a class="reference internal" href="#id3"><span class="std std-ref">2.2.3</span></a>). The module <code class="docutils literal notranslate"><span class="pre">etree</span></code> from the <code class="docutils literal notranslate"><span class="pre">lxml</span></code> library is used to read the XML tree. Since <code class="docutils literal notranslate"><span class="pre">etree</span></code> does not read the XML directly from file, but rather reads the output of the <code class="docutils literal notranslate"><span class="pre">ampersands()</span></code> function, we need the function <code class="docutils literal notranslate"><span class="pre">fromstring()</span></code>:</p>
 <p>After creating the tree, the function <code class="docutils literal notranslate"><span class="pre">mark_extra()</span></code> (<a class="reference internal" href="#id4"><span class="std std-ref">2.2.4</span></a>) is called in order to explicitly mark “additional” and “secondary” words.  The composition name is found in the node <code class="docutils literal notranslate"><span class="pre">title</span></code>. This name is slightly adjusted in two ways. First, all <a class="reference external" href="https://etcsl.orinst.ox.ac.uk/">ETCSL</a> text names include the phrase ” – a composite transliteration”. This is useful for online presentation, but not for computational text analysis. Second, some titles include commas, which may create problems when data are saved in <code class="docutils literal notranslate"><span class="pre">cvs</span></code> format. These two elements are removed from the title.</p>
 <p>The dictionary <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> is updated with the name of the composition (for instance “Inana’s descent to the nether world”) and the line reference count is set to 0. This line reference is updated every time the function <code class="docutils literal notranslate"><span class="pre">getline()</span></code> is called.</p>
@@ -1105,9 +1332,9 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="main-process">
-<span id="id8"></span><h2>2.2.12 Main Process<a class="headerlink" href="#main-process" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-process">
+<span id="id8"></span><h2>2.2.12 Main Process<a class="headerlink" href="#main-process" title="Permalink to this headline">#</a></h2>
 <p>The list <code class="docutils literal notranslate"><span class="pre">alltexts</span></code> is created as an empty list. It will be filled with dictionaries, each dictionary representing one word form.</p>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">textlist</span></code> is a list of all the XML files with <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> compositions in the directory <code class="docutils literal notranslate"><span class="pre">etcsl/transliterations</span></code> in the file <code class="docutils literal notranslate"><span class="pre">etcsl.zip</span></code>. Iterating through this list, each file is unzipped and sent as an argument to the function <code class="docutils literal notranslate"><span class="pre">parsetext()</span></code>.</p>
 <p>The dictionary <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> is created with a single key, <code class="docutils literal notranslate"><span class="pre">id_text</span></code>. This key holds the <a class="reference external" href="http://etcsl.orinst.ox.ac.uk">ETCSL</a> composition number (for instance “c.1.4.1” for Inana’s Descent). On each level of analysis the dictionary is updated with meta-data, such as text name, version name, line number, etc.</p>
@@ -1323,14 +1550,14 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 <p>170856 rows × 12 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="save-as-csv">
-<h2>2.2.13 Save as CSV<a class="headerlink" href="#save-as-csv" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="save-as-csv">
+<h2>2.2.13 Save as CSV<a class="headerlink" href="#save-as-csv" title="Permalink to this headline">#</a></h2>
 <p>The DataFrame that is the result of the notebook is saved as a <code class="docutils literal notranslate"><span class="pre">csv</span></code> file named <code class="docutils literal notranslate"><span class="pre">alltexts.csv</span></code>, where each word form occupies a single row. In many cases, however, we may want to represent the data in a line-by-line or composition-by-composition format and/or filter out certain words (for instance: use only lemmatized words, remove Akkadian words, remove “additional” and/or “secondary” text - etc.). Such transformations can be done most easily in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For manipulating a dataframe in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, see Chapter 2.1: Data Acquisition ORACC (for instance the sections <a class="reference internal" href="../2_1_Data_Acquisition_ORACC/2_1_2_parse-json-cat.html#id1"><span class="std std-ref">2.1.2.6</span></a> and <a class="reference internal" href="../2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.html#id1"><span class="std std-ref">2.1.3.8</span></a>).</p>
-</div>
+</aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output/alltexts.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">w</span><span class="p">:</span>
@@ -1339,8 +1566,8 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1364,34 +1591,48 @@ In the <code class="docutils literal notranslate"><span class="pre">equiv</span>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="../2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.html" title="previous page">2.1.4 ORACC JSON: Extended Parser</a>
-    <a class='right-next' id="next-link" href="../2_3_Data_Acquisition_CDLI/2_3_Data_Acquisition_CDLI.html" title="next page">2.3 Data Acquisition from CDLI</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2.1.4 ORACC JSON: Extended Parser</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../2_3_Data_Acquisition_CDLI/2_3_Data_Acquisition_CDLI.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.3 Data Acquisition from CDLI</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Niek Veldhuis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Niek Veldhuis<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

@@ -32,7 +32,7 @@
 # 
 # Note that the package is *imported* as matplotlib_venn (with underscore) but must be *installed* as matplotlib-venn (with dash). Installation of a package can take quite some time, but it needs to be done only once. 
 
-# In[ ]:
+# In[1]:
 
 
 get_ipython().run_line_magic('matplotlib', 'inline')
@@ -57,7 +57,7 @@ import utils
 # #### 3.1.0.1 Read Lexical and Literary Data
 # The module `utils` in the `utils` directory of Compass includes the function `get_data()` which essentially runs the same code as the [Extended ORACC Parser](../2_1_Data_Acquisition_ORACC/2_1_3_extended_ORACC-JSON_parser.ipynb) (see there for explanation of the code). Its only parameter is a string with [ORACC](http://oracc.org) project names, separated by commas. It returns a Pandas DataFrame in which each word is represented by a row.
 
-# In[ ]:
+# In[2]:
 
 
 projects = "dcclt, dcclt/nineveh, dcclt/signlists, dcclt/ebla, epsd2/literary, dsst"
@@ -73,14 +73,14 @@ words = utils.get_data(projects)
 # 
 # Finally, all lemmas are lower cased, to avoid confusion.
 
-# In[ ]:
+# In[3]:
 
 
 words = words.loc[words["lang"].str.contains("sux")] 
 # remove Akkadian glosses etc as well entries that note horizontal rulings, breakage, etc.
 
 
-# In[ ]:
+# In[4]:
 
 
 words["lemma"] = words.progress_apply(lambda r: f"{r['cf']}[{r['gw']}]{r['pos']}" 
@@ -92,7 +92,7 @@ words["lemma"] = words["lemma"].str.lower()
 # 
 # The Pandas function `isin()` compares the contents of a field with a list and returns a boolean (`True` or `False`). In this case the column `field` (which is primarily used for sign lists) is compared to the list `["sg", "pr"]`. If `field` equals one of these terms `isin()` returns `True`. The `~` before the entire expression changes `True` into `False` and vv. As a result the dataframe `words` now omits all rows that have either "sg" or "pr" in the column `field`.
 
-# In[ ]:
+# In[5]:
 
 
 # remove lemmas that derive from the fields "sign" 
@@ -102,7 +102,7 @@ words = words[~words["field"].isin(["sg", "pr"])]
 
 # #### 3.1.0.3 Split into Lexical and Literary
 
-# In[ ]:
+# In[6]:
 
 
 lex_words = words.loc[words.id_text.str.contains('dcclt')]
@@ -118,7 +118,7 @@ lit_words = words.loc[~words.id_text.str.contains('dcclt')]
 # 
 # The resulting dataframe is reduced to just two columns: `id_text` and `period` so that we can select the ones that have "Old Babylonian" in the `period` column.
 
-# In[ ]:
+# In[7]:
 
 
 file = "jsonzip/dcclt.zip"
@@ -130,7 +130,7 @@ cat_df["id_text"] = cat_df["id_text"].fillna(cat_df["id_composite"])
 cat_df = cat_df[["id_text", "period"]]
 
 
-# In[ ]:
+# In[8]:
 
 
 ob = cat_df[cat_df["period"] == "Old Babylonian"]
@@ -141,7 +141,7 @@ ob[:10]
 # 
 # In the dataframe `lex_words` all text IDs are preceded by `dcclt/`, `dcclt/signlists`, etc. We will compare the last seven characters of `id_text` (the P, Q, or X number), to see if that number appears in `keep`. This will select the Old Babylonian entries.
 
-# In[ ]:
+# In[9]:
 
 
 keep = ob.index.values
@@ -151,7 +151,7 @@ lex_words = lex_words.loc[lex_words["id_text"].str[-7:].isin(keep)]
 # ### 3.1.1 First Approximation
 # Now we have two dataframes: `lit_words` and `lex_words`. In both the field `lemma` contains the lemmatization data of a single word. We can extract the unique lemmas with the `set()` command (a set is an unordered collection of unique elements). We remove the non-lemmatized words (those have `na` as Guide Word and `na` as POS) with a set comprehension, and compare the two resulting sets in a [Venn diagram](https://en.wikipedia.org/wiki/Venn_diagram).
 
-# In[ ]:
+# In[10]:
 
 
 lit_words_s = set(lit_words["lemma"])
@@ -164,7 +164,7 @@ lexical_words_s = {lemma for lemma in lexical_words_s if not '[na]na' in lemma}
 # 
 # In its most basic form the `venn2()` command simply takes a list that contains the two sets.
 
-# In[ ]:
+# In[11]:
 
 
 venn2([lit_words_s, lexical_words_s]);
@@ -172,7 +172,7 @@ venn2([lit_words_s, lexical_words_s]);
 
 # This basic plot is not too informative because it does not include the size of each set, nor its name. We can customize colors, size of the plot, and the legends. This customization is put in a function so it can be reused later on.
 
-# In[ ]:
+# In[12]:
 
 
 def plot_venn(lit_vocab, lex_vocab, file = 'venn_plot.png'):
@@ -197,7 +197,7 @@ def plot_venn(lit_vocab, lex_vocab, file = 'venn_plot.png'):
     return
 
 
-# In[ ]:
+# In[13]:
 
 
 plot_venn(lit_words_s, lexical_words_s, 'venn_1.png')
@@ -232,7 +232,7 @@ plot_venn(lit_words_s, lexical_words_s, 'venn_1.png')
 # 
 # In order to do this we use the Pandas functions `groupby()` and `agg()` (for aggregate). For a brief explanation of these functions see the [Basic ORACC Parser](../2_1_Data_Acquisition_ORACC/2_1_2_basic_ORACC-JSON_parser.ipynb) (in particular section 3.3: Group by TextID). The `to_pickle` function from the `pandas` package saves the resulting DataFrame for use in the next notebook.
 
-# In[ ]:
+# In[14]:
 
 
 lex_lines = lex_words.groupby([lex_words['id_text'], lex_words['id_line']]).agg({
@@ -241,7 +241,7 @@ lex_lines = lex_words.groupby([lex_words['id_text'], lex_words['id_line']]).agg(
 lex_lines.to_pickle('output/lexlines.p')
 
 
-# In[ ]:
+# In[15]:
 
 
 lex_lines[:10]
@@ -249,7 +249,7 @@ lex_lines[:10]
 
 # Now we do the same for the `lit_words` dataframe, reconstructing lines in literary compositions. 
 
-# In[ ]:
+# In[16]:
 
 
 lit_lines = lit_words.groupby([lit_words['id_text'], lit_words['id_line']]).agg({
@@ -257,7 +257,7 @@ lit_lines = lit_words.groupby([lit_words['id_text'], lit_words['id_line']]).agg(
     }).reset_index()
 
 
-# In[ ]:
+# In[17]:
 
 
 lit_lines[1200:1210]
@@ -268,7 +268,7 @@ lit_lines[1200:1210]
 # 
 # Any lexical line that contains an unlemmatized word (characterized by "na" as Guide Word) is useless for the comparison and is deleted from the list. 
 
-# In[ ]:
+# In[18]:
 
 
 lex = set(lex_lines["lemma"])
@@ -283,7 +283,7 @@ lex[-30:]
 # 
 # For this purpose we will first remove from `lex` the single-word entries (tuples with length 1). The resulting list is called `lex_mwe`. Now the tokenizer is inititalized with `lex_mwe` as its sole argument.
 
-# In[ ]:
+# In[19]:
 
 
 lex_mwe = [item for item in lex if len(item) > 1]
@@ -301,7 +301,7 @@ tokenizer = MWETokenizer(lex_mwe)
 # 
 # We can run this list of lemmas through the tokenizer to see what happens.
 
-# In[ ]:
+# In[20]:
 
 
 lemm_line = ["aslum[sheep]n", "udu[sheep]n", "zulumhi[sheep]n", "udu[sheep]n", "niga[fattened]v/i", "ŋeš[tree]n", "tag[touch]v/t"]
@@ -316,7 +316,7 @@ tokenizer.tokenize(lemm_line)
 # 
 # The `lemma_mwe` column of the `lit_lines` dataframe will now represent the [epsd2/literary](http:oracc.org/epsd2/literary) data in a line-by-line presentation of lemmatizations, with underscores connecting lemmas if a corresponding sequence of lemmas exists as an Old Babylonian lexical entry. This version of the DataFrame `lit_lines` is pickled for use in the next notebook.
 
-# In[ ]:
+# In[21]:
 
 
 lemma_list = [lemma.split() for lemma in lit_lines["lemma"]]
@@ -330,7 +330,7 @@ lit_lines.to_pickle('output/litlines.p')
 # * tuple (lex):   (udu\[sheep\]n, diŋir\[god\]n, gu\[eat\]V/t)
 # * MWE (lex_vocab): udu\[sheep\]n_diŋir\[god\]n_gu\[eat\]V/t
 
-# In[ ]:
+# In[22]:
 
 
 lex_vocab = ["_".join(entry) for entry in lex]
@@ -341,7 +341,7 @@ lex_vocab.sort()
 # 
 # We will turn this list into a set (to remove duplicate lemmas and duplicate Multiple Word Expressions) and remove all the non-lemmatized words from the [epsd2/literary](http:oracc.org/epsd2/literary) data set with a single set comprehension. That is the set that we can compare with the set of lemmas and MWEs from the lexical corpus.
 
-# In[ ]:
+# In[23]:
 
 
 lit_words2 = ' '.join(lit_lines['lemma_mwe']).split()
@@ -351,7 +351,7 @@ lexical_words_s2 = set(lex_vocab)
 
 # We can now reuse the function `plot_venn()` that was created above.
 
-# In[ ]:
+# In[24]:
 
 
 plot_venn(lit_words_s2, lexical_words_s2, 'venn_2.png')
@@ -362,7 +362,7 @@ plot_venn(lit_words_s2, lexical_words_s2, 'venn_2.png')
 # 
 # The full lexical vocabulary is written to a file for use in the next notebook.
 
-# In[ ]:
+# In[25]:
 
 
 lit_words_s3 = lit_words_s | lit_words_s2
@@ -371,7 +371,7 @@ with open('output/lex_vocab.txt', 'w', encoding = 'utf8') as w:
     w.write('\n'.join(lexical_words_s3))
 
 
-# In[ ]:
+# In[26]:
 
 
 plot_venn(lit_words_s3, lexical_words_s3, 'venn_3.png')
@@ -382,7 +382,7 @@ plot_venn(lit_words_s3, lexical_words_s3, 'venn_3.png')
 # 
 # On the literary side the number of additional entries is much smaller (counted in the tens, rather than in the hundreds). These are words that appear *only* in fixed expressions (connected by underscore), but not as separate words. We can see which words those are by by subtracting the set `lit_words_s2` from `lit_words_s3`.
 
-# In[ ]:
+# In[27]:
 
 
 lit_words_s3 - lit_words_s2
@@ -390,7 +390,7 @@ lit_words_s3 - lit_words_s2
 
 # The word `ašrinna[object]n`, for instance, appears only a few times in the current literary corpus, in one of the Eduba dialogues and in proverbs. 
 
-# In[ ]:
+# In[28]:
 
 
 lit_lines[lit_lines.lemma_mwe.str.contains('ašrinna')]

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser &#8212; Computational Assyriology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,47 +20,63 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.1.4 ORACC JSON: Extended Parser" href="2_1_4_extended_ORACC-JSON_parser.html" />
     <link rel="prev" title="2.1.2 Retrieve ORACC Catalog Data" href="2_1_2_parse-json-cat.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -67,10 +85,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Computational Assyriology</h1>
@@ -79,16 +99,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Welcome to Computational Assyriology
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to Computational Assyriology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_Preliminaries/1_Introduction.html">
    1. Introduction
@@ -213,96 +234,182 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/2_1_Data_Acquisition_ORACC/2_1_3_basic_ORACC-JSON_parser.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-packages">
    2.1.3.0 Import Packages
@@ -379,17 +486,109 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-packages">
+   2.1.3.0 Import Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminary-create-directories-download-projects">
+   2.1.3.1 Preliminary: Create Directories, Download Projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oracc-json-the-cdl-structure">
+   2.1.3.2 ORACC JSON: the CDL Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-parse-text-json-function">
+   2.1.3.3 The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     parse_text_json()
+    </span>
+   </code>
+   function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#call-the-parse-text-json-function-for-every-json-file">
+   2.1.3.4 Call the
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     parse_text_json()
+    </span>
+   </code>
+   function for every
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     JSON
+    </span>
+   </code>
+   file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structuring">
+   2.1.3.5 Data Structuring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remove-spaces-and-commas-from-guide-word-and-sense">
+   2.1.3.6 Remove Spaces and Commas from Guide Word and Sense
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-lemma-column">
+   2.1.3.7 Create a
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     lemma
+    </span>
+   </code>
+   column
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-by-textid">
+   2.1.3.8 Group by Textid
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-the-results">
+   2.1.3.9 Save the Results
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="extract-lemmatization-from-oracc-json-basic-parser">
-<h1>2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser<a class="headerlink" href="#extract-lemmatization-from-oracc-json-basic-parser" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="extract-lemmatization-from-oracc-json-basic-parser">
+<h1>2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser<a class="headerlink" href="#extract-lemmatization-from-oracc-json-basic-parser" title="Permalink to this headline">#</a></h1>
 <p>The code in this notebook will parse <a class="reference external" href="http://oracc.org">ORACC</a> <code class="docutils literal notranslate"><span class="pre">JSON</span></code> files to extract lemmatization data for one or more projects. The resulting <code class="docutils literal notranslate"><span class="pre">csv</span></code> (Comma Separated Values) file is named <code class="docutils literal notranslate"><span class="pre">parsed.csv</span></code> and has two fields: a Text ID (e.g. <code class="docutils literal notranslate"><span class="pre">dcclt/Q000039</span></code>) and a string of lemmas in the format <code class="docutils literal notranslate"><span class="pre">lugal[king]N</span></code> (or <code class="docutils literal notranslate"><span class="pre">šarru[king]N</span></code> for Akkadian texts).</p>
 <p>The output of the Basic Parser contains <em>only</em> text IDs and lemmas. This format is useful for so-called <a class="reference external" href="https://en.wikipedia.org/wiki/Bag-of-words_model">bag of words</a> techniques such as word clouds or <a class="reference external" href="https://en.wikipedia.org/wiki/Topic_model">topic modeling</a>. The <code class="docutils literal notranslate"><span class="pre">JSON</span></code> files, however, contain a wealth of other data, including language (Sumerian, Akkadian, Emesal, etc.), orthographic form, morphology (currently only for Sumerian and Emesal), line numbers, breakage, etc. The extended JSON parser notebook (2.1.4), building upon the techniques demonstrated here, will show how to extract those data types.</p>
 <p><img alt="bow" src="../_images/bag-of-words.png" /></p>
@@ -399,8 +598,8 @@
 <p>A “bag of words” is a simplified representation (or model) of a text that ignores word order, simply counting how often each lemma appears in a text.</p>
 </div>
 <p>The code for creating directories (<code class="docutils literal notranslate"><span class="pre">jsonzip</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code>), and selecting and downloading the relevant <a class="reference external" href="http://oracc.org">ORACC</a> projects is the same as in previous notebooks and is not commented upon.</p>
-<div class="section" id="import-packages">
-<h2>2.1.3.0 Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h2>
+<section id="import-packages">
+<h2>2.1.3.0 Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>pandas: data analysis and manipulation; dataframes</p></li>
 <li><p>ipywidgets: user interface (enter project names)</p></li>
@@ -427,9 +626,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="preliminary-create-directories-download-projects">
-<h2>2.1.3.1 Preliminary: Create Directories, Download Projects<a class="headerlink" href="#preliminary-create-directories-download-projects" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="preliminary-create-directories-download-projects">
+<h2>2.1.3.1 Preliminary: Create Directories, Download Projects<a class="headerlink" href="#preliminary-create-directories-download-projects" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;jsonzip&#39;</span><span class="p">,</span> <span class="n">exist_ok</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -439,10 +638,10 @@
 </div>
 </div>
 <p>Input Project Names</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Subprojects must be listed separately, they are not included in the main project. A subproject is named <code class="docutils literal notranslate"><span class="pre">[PROJECT]/[SUBPROJECT]</span></code>, for instance <code class="docutils literal notranslate"><span class="pre">saao/saa01</span></code>.</p>
-</div>
+</aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projects</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Textarea</span><span class="p">(</span>
@@ -467,9 +666,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="oracc-json-the-cdl-structure">
-<h2>2.1.3.2 ORACC JSON: the CDL Structure<a class="headerlink" href="#oracc-json-the-cdl-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="oracc-json-the-cdl-structure">
+<h2>2.1.3.2 ORACC JSON: the CDL Structure<a class="headerlink" href="#oracc-json-the-cdl-structure" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="http://oracc.org">ORACC</a> <code class="docutils literal notranslate"><span class="pre">zip</span></code> files contain JSON files for each individual text (exemplar or composite) that is part of that project. These files are found in the directory <code class="docutils literal notranslate"><span class="pre">corpusjson</span></code> and are named after the text ID (for instance <code class="docutils literal notranslate"><span class="pre">P200931.json</span></code>). The <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function (2.1.3.3) extracts basic lemmatization data from each of those files. In the next section (2.1.4) we will review techniques to extract other types of information from these same files.</p>
 <p>The structure of the JSON files for text editions is fairly complex, because of the hierarchical structure of textual data. A text may have one or more surfaces (obverse, reverse), each surface may have one or more columns; each column has lines; each line has words; and each word has signs.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>text object
@@ -495,78 +694,78 @@
 <p class="admonition-title">Note</p>
 <p>In some <a class="reference external" href="http://oracc.org">ORACC</a> projects the <code class="docutils literal notranslate"><span class="pre">gdl</span></code> node will also include the actual glyphs of the cuneiform signs.</p>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><img alt="P251867" src="http://cdli.ucla.edu/dl/tn_photo/P251867.jpg" />
 CUSAS 12 3.1.06; Old Babylonian school text</p>
-</div>
+</aside>
 <p>The structure may be illustrated with the beginning of <a class="reference external" href="http://oracc.org/dcclt/P251867">P251867</a>, an Old Babylonian 3-line lentil (school text), edited in <a class="reference external" href="http://oracc.org/dcclt">DCCLT</a> (beginning of the file omitted):</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cdl&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="p">{</span>
-  <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.U0&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;cdl&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;ref&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;subtype&quot;</span><span class="p">:</span> <span class="s2">&quot;obverse&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;obverse&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;ref&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.o.1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;o&quot;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;discourse&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;subtype&quot;</span><span class="p">:</span> <span class="s2">&quot;body&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.U1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;cdl&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-          <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sentence&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.U2&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;o 1 - o 3&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;cdl&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;line-start&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;ref&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.2&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;n&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;o 1&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;frag&quot;</span><span class="p">:</span> <span class="s2">&quot;{ŋeš}ma₂-durah-abzu&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.l1ac01&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;ref&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.2.1&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;inst&quot;</span><span class="p">:</span> <span class="s2">&quot;Madurahabzu[1]ON&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;sig&quot;</span><span class="p">:</span> <span class="s2">&quot;@dcclt%sux:{ŋeš}ma₂-durah-abzu=Madurahabzu[1//1]ON&#39;ON$Madurahabzu/{ŋeš}ma₂-durah-abzu#~&quot;</span><span class="p">,</span>
-              <span class="nt">&quot;f&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;lang&quot;</span><span class="p">:</span> <span class="s2">&quot;sux&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;form&quot;</span><span class="p">:</span> <span class="s2">&quot;{ŋeš}ma₂-durah-abzu&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;gdl&quot;</span><span class="p">:</span> <span class="p">[</span>
-                  <span class="p">{</span>
-                    <span class="nt">&quot;det&quot;</span><span class="p">:</span> <span class="s2">&quot;semantic&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;pre&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;seq&quot;</span><span class="p">:</span> <span class="p">[</span>
-                      <span class="p">{</span>
-                        <span class="nt">&quot;v&quot;</span><span class="p">:</span> <span class="s2">&quot;ŋeš&quot;</span><span class="p">,</span>
-                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;P251867.2.1.0&quot;</span>
-                      <span class="p">}</span>
-                    <span class="p">]</span>
-                  <span class="p">},</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cdl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.U0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;cdl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;subtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;obverse&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;obverse&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.o.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;o&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;discourse&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;subtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;body&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.U1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;cdl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sentence&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.U2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;o 1 - o 3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;cdl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;line-start&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;n&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;o 1&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;l&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;frag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{ŋeš}ma₂-durah-abzu&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.l1ac01&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.2.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;inst&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madurahabzu[1]ON&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;sig&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@dcclt%sux:{ŋeš}ma₂-durah-abzu=Madurahabzu[1//1]ON&#39;ON$Madurahabzu/{ŋeš}ma₂-durah-abzu#~&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;f&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sux&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;form&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{ŋeš}ma₂-durah-abzu&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;gdl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                  </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;det&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;semantic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pre&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;seq&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                      </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">&quot;v&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ŋeš&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P251867.2.1.0&quot;</span><span class="w"></span>
+<span class="w">                      </span><span class="p">}</span><span class="w"></span>
+<span class="w">                    </span><span class="p">]</span><span class="w"></span>
+<span class="w">                  </span><span class="p">},</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The first <code class="docutils literal notranslate"><span class="pre">cdl</span></code> key contains a list that has a single element, a dictionary (the ending square bracket of this list is not included in the snippet). This dictionary is a <code class="docutils literal notranslate"><span class="pre">c</span></code> node (Chunk) representing the entire text. The <code class="docutils literal notranslate"><span class="pre">c</span></code> node contains a new <code class="docutils literal notranslate"><span class="pre">cdl</span></code> key which has a list of dictionaries as its value including two <code class="docutils literal notranslate"><span class="pre">d</span></code> (Discontinuity) nodes (<code class="docutils literal notranslate"><span class="pre">object</span></code> and <code class="docutils literal notranslate"><span class="pre">obverse</span></code>) and another <code class="docutils literal notranslate"><span class="pre">c</span></code> node that represents a discourse unit, namely the body of the text (note that Chunk <code class="docutils literal notranslate"><span class="pre">text</span></code> and Chunk <code class="docutils literal notranslate"><span class="pre">body</span></code> are identical here - but that need not be the case). Eventually, there is a node <code class="docutils literal notranslate"><span class="pre">l</span></code> that contains the transliteration and lemmatization data for the first word of this text.</p>
 <p>This hierarchy implies that a word (an “l” node) may belong to different hierarchies that do not necessarily align. For instance, a word may belong to a sentence (a Chunk) that continues from the obverse to the reverse (Discontinuities) of a tablet. The JSON structure allows to express (and to retrieve) those facts simultaneously. In the present section, however, we are <em>only</em> interested in the lemmatization data (in section 2.1.4 we will discuss how to extract information from <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">d</span></code> nodes).</p>
 <p>In order to extract the lemmatization data we need to iterate through the hierarchy of <code class="docutils literal notranslate"><span class="pre">cdl</span></code> keys until we encounter an <code class="docutils literal notranslate"><span class="pre">l</span></code> node, containing an <code class="docutils literal notranslate"><span class="pre">f</span></code> key. The value of the <code class="docutils literal notranslate"><span class="pre">f</span></code> key is the data we want.</p>
-</div>
-<div class="section" id="the-parse-text-json-function">
-<h2>2.1.3.3 The <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function<a class="headerlink" href="#the-parse-text-json-function" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-parse-text-json-function">
+<h2>2.1.3.3 The <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function<a class="headerlink" href="#the-parse-text-json-function" title="Permalink to this headline">#</a></h2>
 <p>A straightforward way of extracting the lemmatization data out of an <a class="reference external" href="http://oracc.org">ORACC</a> JSON file is by defining a recursive function, that is, a function that calls itself to recursively inspect the value of successive layers of <code class="docutils literal notranslate"><span class="pre">cdl</span></code> keys until one encounters an <code class="docutils literal notranslate"><span class="pre">f</span></code> key. The contents of the <code class="docutils literal notranslate"><span class="pre">f</span></code> key are then added to a list. In its most basic form that function looks like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">parse_text_json</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">lemmas</span> <span class="o">=</span> <span class="p">[]</span>
@@ -597,9 +796,9 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="call-the-parse-text-json-function-for-every-json-file">
-<h2>2.1.3.4 Call the <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function for every <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file<a class="headerlink" href="#call-the-parse-text-json-function-for-every-json-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="call-the-parse-text-json-function-for-every-json-file">
+<h2>2.1.3.4 Call the <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function for every <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file<a class="headerlink" href="#call-the-parse-text-json-function-for-every-json-file" title="Permalink to this headline">#</a></h2>
 <p>The code in this cell consists of two loops: one going through the list of projects to be parsed, and one going through the list of texts included in each project. Each text is sent to the <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function, which returns a list of lemmata. All these lists are concatenated into one list called <code class="docutils literal notranslate"><span class="pre">lemm_l</span></code>.</p>
 <p>For each project the <code class="docutils literal notranslate"><span class="pre">JSON</span></code> zip file is located in the directory <code class="docutils literal notranslate"><span class="pre">jsonzip</span></code>, named PROJECT.zip. The <code class="docutils literal notranslate"><span class="pre">zip</span></code> file contains a directory that is called <code class="docutils literal notranslate"><span class="pre">corpusjson</span></code> that contains a JSON file for every text that is available in that corpus. The files are called after their text IDs in the pattern <code class="docutils literal notranslate"><span class="pre">P######.json</span></code> (or <code class="docutils literal notranslate"><span class="pre">Q######.json</span></code> or <code class="docutils literal notranslate"><span class="pre">X######.json</span></code>).</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">namelist()</span></code> of the <code class="docutils literal notranslate"><span class="pre">zipfile</span></code> package is used to create a list of the names of all the files in the ZIP. From this list we select all the file names in the <code class="docutils literal notranslate"><span class="pre">corpusjson</span></code> directory with extension <code class="docutils literal notranslate"><span class="pre">.json</span></code> (this way we exclude the name of the directory itself).</p>
@@ -638,13 +837,13 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 {"model_id": "153bb5f2f83d450ab669a5644febb358", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="data-structuring">
-<h2>2.1.3.5 Data Structuring<a class="headerlink" href="#data-structuring" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+<section id="data-structuring">
+<h2>2.1.3.5 Data Structuring<a class="headerlink" href="#data-structuring" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>NaN represents the missing value. It’s data type is numerical (float) - it may cause all kinds of trouble in data manipulation.</p>
-</div>
+</aside>
 <p>The list <code class="docutils literal notranslate"><span class="pre">lemm_l</span></code> is transformed into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe (<code class="docutils literal notranslate"><span class="pre">word_df</span></code>) for further manipulation. The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function <code class="docutils literal notranslate"><span class="pre">fillna('')</span></code> fills gaps in the dataframe.</p>
 <p>For various reasons not all JSON files will have all data types that potentially exist in an <a class="reference external" href="http://oracc.org">ORACC</a> lemmatization. For instance, only Sumerian words have a <code class="docutils literal notranslate"><span class="pre">base</span></code>, so if your data set has no Sumerian, this column will not exist in the DataFrame.</p>
 <div class="cell docutils container">
@@ -919,9 +1118,9 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 <p>10530 rows × 17 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="remove-spaces-and-commas-from-guide-word-and-sense">
-<h2>2.1.3.6 Remove Spaces and Commas from Guide Word and Sense<a class="headerlink" href="#remove-spaces-and-commas-from-guide-word-and-sense" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="remove-spaces-and-commas-from-guide-word-and-sense">
+<h2>2.1.3.6 Remove Spaces and Commas from Guide Word and Sense<a class="headerlink" href="#remove-spaces-and-commas-from-guide-word-and-sense" title="Permalink to this headline">#</a></h2>
 <p>Spaces and commas in Guide Word and Sense may cause trouble in computational methods in tokenization, or when saved in Comma Separated Values format. All spaces and commas are replaced by hyphens and nothing (empty string), respectively. By default the <code class="docutils literal notranslate"><span class="pre">replace()</span></code> function in <code class="docutils literal notranslate"><span class="pre">pandas</span></code> will match the entire string (that is, “lugal” matches “lugal” but there is no match between “l” and “lugal”). In order to match partial strings the parameter <code class="docutils literal notranslate"><span class="pre">regex</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">replace()</span></code> function takes a nested dictionary as argument. The top-level keys identify the columns on which the <code class="docutils literal notranslate"><span class="pre">replace()</span></code> function should operate (in this case ‘gw’ and ‘sense’). The value of each key is another dictionary with the search string as key and the replace string as value.</p>
 <div class="cell docutils container">
@@ -932,13 +1131,13 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="create-a-lemma-column">
-<h2>2.1.3.7 Create a <code class="docutils literal notranslate"><span class="pre">lemma</span></code> column<a class="headerlink" href="#create-a-lemma-column" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+<section id="create-a-lemma-column">
+<h2>2.1.3.7 Create a <code class="docutils literal notranslate"><span class="pre">lemma</span></code> column<a class="headerlink" href="#create-a-lemma-column" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For the representation of numbers in Sumerian administrative texts, see <a class="reference external" href="http://oracc.museum.upenn.edu/doc/help/editinginatf/cdliatf/numbers/index.html">Numbers and Metrology in CDLI Corpora</a>.</p>
-</div>
+</aside>
 <p>The DataFrame <code class="docutils literal notranslate"><span class="pre">word_df</span></code> includes all the fields that were present in the <code class="docutils literal notranslate"><span class="pre">f</span></code> keys of the JSON files we parsed, plus the extra fields (such as <code class="docutils literal notranslate"><span class="pre">id_text</span></code>) that we have added. It is not likely that we want to keep the DataFrame in this raw format. For many types of analysis one may need the lemma. A lemma, <a class="reference external" href="http://oracc.org">ORACC</a> style, combines Citation Form, Guide Word and Part of Speech into a unique reference to one particular entry in a standard dictionary, as in <code class="docutils literal notranslate"><span class="pre">lugal[king]N</span></code> (Sumerian) or <code class="docutils literal notranslate"><span class="pre">nadānu[give]V</span></code> (Akkadian). Usually, not all words in a text are lemmatized, because a word may be (partly) broken and/or unknown. The code below will create a new field <code class="docutils literal notranslate"><span class="pre">lemma</span></code> that has the following form:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1060,9 +1259,9 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 <p>10530 rows × 2 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="group-by-textid">
-<span id="id1"></span><h2>2.1.3.8 Group by Textid<a class="headerlink" href="#group-by-textid" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="group-by-textid">
+<span id="id1"></span><h2>2.1.3.8 Group by Textid<a class="headerlink" href="#group-by-textid" title="Permalink to this headline">#</a></h2>
 <p>Get all the lemmas that belong to a single text in one row (one row = one document). The <code class="docutils literal notranslate"><span class="pre">agg()</span></code> (aggregate) function, which works on the result of a <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> process, aggregates data of the original dataframe. The aggregate function takes a dictionary in which the keys are column names and the values are functions to be used in the aggregation process. The example below has only one such function (<code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'.join</span></code> will join all entries in the colum <code class="docutils literal notranslate"><span class="pre">lemma</span></code> with a space in between); one may specify (the same or different) functions for different columns, for instance:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_df</span> <span class="o">=</span> <span class="n">word_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;textid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">,</span> <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">})</span>
 </pre></div>
@@ -1165,14 +1364,14 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 <p>171 rows × 2 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="save-the-results">
-<h2>2.1.3.9 Save the Results<a class="headerlink" href="#save-the-results" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="save-the-results">
+<h2>2.1.3.9 Save the Results<a class="headerlink" href="#save-the-results" title="Permalink to this headline">#</a></h2>
 <p>The code for saving the results (as <code class="docutils literal notranslate"><span class="pre">csv</span></code> file or as a <code class="docutils literal notranslate"><span class="pre">pickle</span></code> file is the same as that in section 2.1.2.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>The preferred encoding is ‘utf-8’. For files to be opened in Excel, you may instead use <code class="docutils literal notranslate"><span class="pre">encoding</span> <span class="pre">=</span> <span class="pre">'utf-16'</span></code>. Pickled files do not store characters and therefore have no encoding.</p>
-</div>
+</aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">savefile</span> <span class="o">=</span>  <span class="s1">&#39;parsed.csv&#39;</span>
@@ -1190,8 +1389,8 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1215,34 +1414,48 @@ CUSAS 12 3.1.06; Old Babylonian school text</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="2_1_2_parse-json-cat.html" title="previous page">2.1.2 Retrieve ORACC Catalog Data</a>
-    <a class='right-next' id="next-link" href="2_1_4_extended_ORACC-JSON_parser.html" title="next page">2.1.4 ORACC JSON: Extended Parser</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2_1_2_parse-json-cat.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2.1.2 Retrieve ORACC Catalog Data</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="2_1_4_extended_ORACC-JSON_parser.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.1.4 ORACC JSON: Extended Parser</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Niek Veldhuis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Niek Veldhuis<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.4.2 Build Sign Search for BDTNS &#8212; Computational Assyriology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,47 +20,63 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Lexical and Literary Vocabularies" href="../3_Vocabularies/3_Lexical_and_Literary_Vocabularies.html" />
     <link rel="prev" title="2.4.1 Data Acquision BDTNS" href="2_4_1_Data_Acquisition_BDTNS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -67,10 +85,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Computational Assyriology</h1>
@@ -79,16 +99,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Welcome to Computational Assyriology
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to Computational Assyriology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_Preliminaries/1_Introduction.html">
    1. Introduction
@@ -213,96 +234,182 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/2_4_Data_Acquisition_BDTNS/2_4_2_Build_Sign_Search.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_4_Data_Acquisition_BDTNS/2_4_2_Build_Sign_Search.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_4_Data_Acquisition_BDTNS/2_4_2_Build_Sign_Search.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_4_Data_Acquisition_BDTNS/2_4_2_Build_Sign_Search.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_4_Data_Acquisition_BDTNS/2_4_2_Build_Sign_Search.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/2_4_Data_Acquisition_BDTNS/2_4_2_Build_Sign_Search.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-packages-and-create-directories">
    2.4.2.0 Import Packages and create directories
@@ -387,17 +494,117 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2.4.2 Build Sign Search for BDTNS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-packages-and-create-directories">
+   2.4.2.0 Import Packages and create directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-the-ogsl-zip-file">
+   2.4.2.1 Download the OGSL ZIP file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-parse-ogsl-json-function">
+   2.4.2.2 The parse_ogsl_json() function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#process-the-json">
+   2.4.2.3 Process the JSON
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspect-the-results-in-dataframe">
+   2.4.2.4 Inspect the Results in Dataframe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-bdtns-data">
+   2.4.2.5 Open BDTNS Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenizing-signs">
+   2.4.2.6 Tokenizing Signs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-metadata">
+   2.4.2.7 Adding Metadata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-search-function">
+   2.4.2.8 The Search Function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-user-interface">
+   2.4.2.9. Creating a User Interface
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-user-interface">
+     2.4.2.9.1 The User interface
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-the-search-function">
+     2.4.2.9.2 Calling the search function.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#link-user-interface-with-the-search-function">
+     2.4.2.9.3 Link User Interface with the search function.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout-of-user-interface-and-output">
+     2.4.2.9.4 Layout of User Interface and output.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternative-interface">
+   2.4.2.10 Alternative Interface
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#search-instructions">
+   2.4.2.11 Search Instructions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="build-sign-search-for-bdtns">
-<span id="id1"></span><h1>2.4.2 Build Sign Search for BDTNS<a class="headerlink" href="#build-sign-search-for-bdtns" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="build-sign-search-for-bdtns">
+<span id="id1"></span><h1>2.4.2 Build Sign Search for BDTNS<a class="headerlink" href="#build-sign-search-for-bdtns" title="Permalink to this headline">#</a></h1>
 <p>Goal of this notebook is to build a tool for searching the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> data by signs, irrespective of their reading. For instance, the sign NE may be read bi₂, ne, izi, šeŋ₆, kum₂, lam₂, zah₂, etc. It is easy to search for transliteration (and/or metadata) in the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> search page, but there is currently no way to search for a sequence of signs. This is useful, in particular, in two situations.</p>
 <ol class="simple">
 <li><p>Sumerological transliteration conventions may differ quite substantially between different schools. Thus, lu₂ kin-gi₄-a, {lu₂}kin-gi₄-a, lu₂ kiŋ₂-gi₄-a and {lu₂}kiŋ₂-gi₄-a all represent the same sequence of signs and the same word (meaning ‘messenger’), but without knowledge of the particular set of conventions used it may be difficult to guess which search will yield the desired results. In the sign search one may enter sign readings according to any convention recognized by the ORACC Global Sign List (<a class="reference external" href="http://oracc.org/ogsl">OGSL</a>).</p></li>
@@ -424,13 +631,13 @@
 </div></blockquote>
 </div>
 <p>In the output the columns <code class="docutils literal notranslate"><span class="pre">id_text</span></code>, <code class="docutils literal notranslate"><span class="pre">label</span></code> (line number), and <code class="docutils literal notranslate"><span class="pre">text</span></code> are shown (not <code class="docutils literal notranslate"><span class="pre">sign_name</span></code>). By default, the search displays only the first 25 hits and the <code class="docutils literal notranslate"><span class="pre">id_text</span></code> (the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> number) is used to create a link to the online edition.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Widgets are pieces of software that can be used to create a Graphical User Interface and allow the user to interact with the script.</p>
-</div>
+</aside>
 <p>The search engine uses “widgets” to call the search function and display the results.</p>
-<div class="section" id="import-packages-and-create-directories">
-<h2>2.4.2.0 Import Packages and create directories<a class="headerlink" href="#import-packages-and-create-directories" title="Permalink to this headline">¶</a></h2>
+<section id="import-packages-and-create-directories">
+<h2>2.4.2.0 Import Packages and create directories<a class="headerlink" href="#import-packages-and-create-directories" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>requests: for communicating with a server over the internet</p></li>
 <li><p>pandas: data analysis and manipulation; dataframes</p></li>
@@ -446,7 +653,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="c1">#pd.set_option(&#39;display.max_rows&#39;, None)</span>
 <span class="kn">from</span> <span class="nn">tqdm.auto</span> <span class="kn">import</span> <span class="n">tqdm</span>  <span class="c1"># tqdm.auto will activate the notebook version when called from a notebook</span>
 <span class="n">tqdm</span><span class="o">.</span><span class="n">pandas</span><span class="p">()</span> <span class="c1"># initiate progress bars for pandas</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -464,9 +671,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="download-the-ogsl-zip-file">
-<h2>2.4.2.1 Download the OGSL ZIP file<a class="headerlink" href="#download-the-ogsl-zip-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="download-the-ogsl-zip-file">
+<h2>2.4.2.1 Download the OGSL ZIP file<a class="headerlink" href="#download-the-ogsl-zip-file" title="Permalink to this headline">#</a></h2>
 <p>The sign search uses the ORACC Global Sign List <a class="reference external" href="http://oracc.org/ogsl">OGSL</a>, available in JSON format at <a class="reference external" href="http://build-oracc.museum.upenn.edu/json/ogsl.zip">http://build-oracc.museum.upenn.edu/json/ogsl.zip</a>. The function <code class="docutils literal notranslate"><span class="pre">oracc_download()</span></code> from the <code class="docutils literal notranslate"><span class="pre">utils</span></code> module downloads the JSON file in ZIP format. The function expects a list as its sole argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -479,9 +686,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-parse-ogsl-json-function">
-<h2>2.4.2.2 The parse_ogsl_json() function<a class="headerlink" href="#the-parse-ogsl-json-function" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-parse-ogsl-json-function">
+<h2>2.4.2.2 The parse_ogsl_json() function<a class="headerlink" href="#the-parse-ogsl-json-function" title="Permalink to this headline">#</a></h2>
 <p>The function iterates through the JSON object. The output is a dictionary where each possible reading, listed in <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> is a key, the value is the sign name of that reading. For instance</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s1">&#39;u₄&#39;</span> <span class="p">:</span> <span class="s1">&#39;UD&#39;</span><span class="p">,</span> 
      <span class="s1">&#39;ud&#39;</span> <span class="p">:</span> <span class="s1">&#39;UD&#39;</span><span class="p">,</span> 
@@ -520,9 +727,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="process-the-json">
-<h2>2.4.2.3 Process the JSON<a class="headerlink" href="#process-the-json" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="process-the-json">
+<h2>2.4.2.3 Process the JSON<a class="headerlink" href="#process-the-json" title="Permalink to this headline">#</a></h2>
 <p>In the main process the file <code class="docutils literal notranslate"><span class="pre">ogsl-sl.json</span></code> is extracted from the zip and made into a JSON object (with the <code class="docutils literal notranslate"><span class="pre">json.loads()</span></code> function). This object is sent to the <code class="docutils literal notranslate"><span class="pre">parsejson()</span></code> function defined above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -539,9 +746,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="inspect-the-results-in-dataframe">
-<h2>2.4.2.4 Inspect the Results in Dataframe<a class="headerlink" href="#inspect-the-results-in-dataframe" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="inspect-the-results-in-dataframe">
+<h2>2.4.2.4 Inspect the Results in Dataframe<a class="headerlink" href="#inspect-the-results-in-dataframe" title="Permalink to this headline">#</a></h2>
 <p>This DataFrame is only for inspection - it is not otherwise used in the code below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -677,9 +884,9 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="open-bdtns-data">
-<h2>2.4.2.5 Open BDTNS Data<a class="headerlink" href="#open-bdtns-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="open-bdtns-data">
+<h2>2.4.2.5 Open BDTNS Data<a class="headerlink" href="#open-bdtns-data" title="Permalink to this headline">#</a></h2>
 <p>We can now open the dataframe with the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> transliterations. This dataframe was pickled in notebook <a class="reference internal" href="2_4_1_Data_Acquisition_BDTNS.html"><span class="doc std std-doc">2_4_1_Data_Acquisition_BDTNS.ipynb</span></a>. The dataframe has five fields: <code class="docutils literal notranslate"><span class="pre">id_text</span></code> (the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> number of a document), <code class="docutils literal notranslate"><span class="pre">id_line</span></code> (a continuous line numbering that starts at 1 for each new document; integer), <code class="docutils literal notranslate"><span class="pre">label</span></code> (the regular, human legible <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> line number), <code class="docutils literal notranslate"><span class="pre">text</span></code> (the transliteration of the line) and <code class="docutils literal notranslate"><span class="pre">comments</span></code> (any comments added to the line in <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -760,9 +967,9 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="tokenizing-signs">
-<h2>2.4.2.6 Tokenizing Signs<a class="headerlink" href="#tokenizing-signs" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tokenizing-signs">
+<h2>2.4.2.6 Tokenizing Signs<a class="headerlink" href="#tokenizing-signs" title="Permalink to this headline">#</a></h2>
 <p>In order to search by sign, we need to tokenize signs in the transliteration column (<code class="docutils literal notranslate"><span class="pre">text</span></code>) while ignoring elements such as question marks or (half-) brackets. First step is to define different types of separators, and flags that may be present in the text or in the sign name. The most common separators are space and hyphen. Curly brackets are placed around determinatives (semantic classifiers), as in {d}En-lil₂ (“the god Enlil”). Curly brackets and hyphens will be replaced by spaces. The separators in <code class="docutils literal notranslate"><span class="pre">separators2</span></code> are used in compound signs, as in |SI.A|, or |ŠU+NIGIN|. Operators, finally, are also used in compound signs and indicate how the signs are written in relation to each other (on top of each other, one inside the other, etc.). Compound signs that represent a sequence of simple signs (|SI.A| for <strong>dirig</strong> or |A.TU.GAB.LIŠ| for <strong>asal₂</strong>) will be decomposed in their component signs. Compound signs of the type |KA×GAR| (for <strong>gu₇</strong>) are not analyzed, but their component parts are aligned with <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> practices (that is |KA×NINDA| will be re-written as |KA×GAR|, because in <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> GAR is the name of the sign that can be read <strong>ninda</strong> or <strong>gar</strong>).</p>
 <p>Finally the flags include various characters that may appear in the transliteration but will be ignored in the search. A search for <code class="docutils literal notranslate"><span class="pre">ninda</span></code>, therefore, will find <code class="docutils literal notranslate"><span class="pre">ninda</span></code>, <code class="docutils literal notranslate"><span class="pre">[nin]da</span></code>, <code class="docutils literal notranslate"><span class="pre">ninda?</span></code>, etc., as well as <code class="docutils literal notranslate"><span class="pre">gar</span></code>, <code class="docutils literal notranslate"><span class="pre">⸢gar⸣</span></code>, <code class="docutils literal notranslate"><span class="pre">gar!(SIG)</span></code>, etc. (but not <code class="docutils literal notranslate"><span class="pre">nagar</span></code>, see below).</p>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">flags2none</span></code> represents a table in which each character in <code class="docutils literal notranslate"><span class="pre">flags</span></code> corresponds to <code class="docutils literal notranslate"><span class="pre">None</span></code>. This is used by the <code class="docutils literal notranslate"><span class="pre">translate()</span></code> method; see below.</p>
@@ -834,9 +1041,9 @@
 {"model_id": "cb21d3532da24caf858f9e542a82ae6e", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="adding-metadata">
-<h2>2.4.2.7 Adding Metadata<a class="headerlink" href="#adding-metadata" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="adding-metadata">
+<h2>2.4.2.7 Adding Metadata<a class="headerlink" href="#adding-metadata" title="Permalink to this headline">#</a></h2>
 <p>Open the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> catalog DataFrame (pickled in section <a class="reference internal" href="2_4_1_Data_Acquisition_BDTNS.html#id3"><span class="std std-ref">2.4.1.5.1</span></a> and add provenance, date, and publication to each row.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -859,9 +1066,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-search-function">
-<h2>2.4.2.8 The Search Function<a class="headerlink" href="#the-search-function" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-search-function">
+<h2>2.4.2.8 The Search Function<a class="headerlink" href="#the-search-function" title="Permalink to this headline">#</a></h2>
 <p>The search function takes as input any style of transliteration recognized in <a class="reference external" href="http://orac.org/ogsl">OGSL</a> in upper or lower case (see the search instructions below).</p>
 <p>The search engine will find any matching sequence of signs, independent of the transliteration, thus ‘nig2 sig’ will also find ‘ninda sig’ or ‘nig2-sig’ or ‘gar-sig’ etc.</p>
 <p>The search results are listed in a DataFrame with links to the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> pages of the matching texts.</p>
@@ -907,9 +1114,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-a-user-interface">
-<h2>2.4.2.9. Creating a User Interface<a class="headerlink" href="#creating-a-user-interface" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creating-a-user-interface">
+<h2>2.4.2.9. Creating a User Interface<a class="headerlink" href="#creating-a-user-interface" title="Permalink to this headline">#</a></h2>
 <p>The user interface is created with widgets from the package <code class="docutils literal notranslate"><span class="pre">ipywidgets</span></code>. Widgets are pieces of software that allow a user to interact with functions through text boxes, sliders, buttons, drop-down menus, check boxes, etc.</p>
 <p>The widgets used here are</p>
 <ul class="simple">
@@ -926,8 +1133,8 @@
 <li><p>Output, an area where the search output is displayed</p></li>
 </ul>
 <p>The code for each widget consists of several parts. First, the widget is called with various parameters, such as its default value, or the text that is to appear on a button. Second is a function that defines what happens when the button is clicked, or when the user hits the ENTER button. Third, a method for each of the widgets defines what event will trigger the function. For the button it is the event <code class="docutils literal notranslate"><span class="pre">on_click</span></code>, for the text box it is <code class="docutils literal notranslate"><span class="pre">on_submit</span></code> (that is, when the user hits ENTER); the other three widgets listen for a change in value with the <code class="docutils literal notranslate"><span class="pre">observe</span></code> method. Finally, the VBox and HBox widgets define the layout.</p>
-<div class="section" id="the-user-interface">
-<h3>2.4.2.9.1 The User interface<a class="headerlink" href="#the-user-interface" title="Permalink to this headline">¶</a></h3>
+<section id="the-user-interface">
+<h3>2.4.2.9.1 The User interface<a class="headerlink" href="#the-user-interface" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a User Interface</span>
@@ -955,9 +1162,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="calling-the-search-function">
-<h3>2.4.2.9.2 Calling the search function.<a class="headerlink" href="#calling-the-search-function" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="calling-the-search-function">
+<h3>2.4.2.9.2 Calling the search function.<a class="headerlink" href="#calling-the-search-function" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">submit_search</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
@@ -970,9 +1177,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="link-user-interface-with-the-search-function">
-<h3>2.4.2.9.3 Link User Interface with the search function.<a class="headerlink" href="#link-user-interface-with-the-search-function" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="link-user-interface-with-the-search-function">
+<h3>2.4.2.9.3 Link User Interface with the search function.<a class="headerlink" href="#link-user-interface-with-the-search-function" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when maxhits is set larger than 250, default becomes no links</span>
@@ -991,9 +1198,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="layout-of-user-interface-and-output">
-<h3>2.4.2.9.4 Layout of User Interface and output.<a class="headerlink" href="#layout-of-user-interface-and-output" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="layout-of-user-interface-and-output">
+<h3>2.4.2.9.4 Layout of User Interface and output.<a class="headerlink" href="#layout-of-user-interface-and-output" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># displaying the widgets and output together</span>
@@ -1009,10 +1216,10 @@
 {"model_id": "9b75e905f14c435cbf7b673454335ce9", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-</div>
-<div class="section" id="alternative-interface">
-<h2>2.4.2.10 Alternative Interface<a class="headerlink" href="#alternative-interface" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="alternative-interface">
+<h2>2.4.2.10 Alternative Interface<a class="headerlink" href="#alternative-interface" title="Permalink to this headline">#</a></h2>
 <p>The following alterative interface is much simpler in its coding (essentially letting the <code class="docutils literal notranslate"><span class="pre">interact</span></code> function do all the work). To be useful, this interface requires a fairly fast machine because the search will update live while you type. The interface uses the same search function as above, so search instructions and results are the same.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1034,9 +1241,9 @@
 {"model_id": "835f996b904248538cd8494d20b254e5", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="search-instructions">
-<h2>2.4.2.11 Search Instructions<a class="headerlink" href="#search-instructions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="search-instructions">
+<h2>2.4.2.11 Search Instructions<a class="headerlink" href="#search-instructions" title="Permalink to this headline">#</a></h2>
 <p>Search for a sequence of sign values in any transliteration system recognized by <a class="reference external" href="http://oracc.org/ogsl">OGSL</a>. Thus, sugal₇, sukkal, or luh, in upper or lower case will all return the same results.</p>
 <ul class="simple">
 <li><p>Determinatives (semantic classifiers) may be entered between curly brackets or as regular signs. Thus, gesz taškarin, gesz-taskarin, {ŋesz}taskarin, and {ŋeš}tug₂ will all yield the same results.</p></li>
@@ -1049,8 +1256,8 @@
 <li><p>For large numbers of hits, the clickable links to <a class="reference external" href="http://bdtns.filol.csic.es/">BDTNS</a> editions will make display very slow. Unclick the check box to display <a class="reference external" href="http://bdtns.filol.csic.es/">BDTNS</a> numbers only, without links. Setting the number of hits higher than 250 will change the default to no links.</p></li>
 <li><p>The results may be ordered by text, provenance, date, id_text (the default) or publication (use the drop-down menu). Note that dates are sorted alphabetically, so that Amar-Suen dates preceded Shulgi dates.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1074,34 +1281,48 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="2_4_1_Data_Acquisition_BDTNS.html" title="previous page">2.4.1 Data Acquision BDTNS</a>
-    <a class='right-next' id="next-link" href="../3_Vocabularies/3_Lexical_and_Literary_Vocabularies.html" title="next page">3. Lexical and Literary Vocabularies</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2_4_1_Data_Acquisition_BDTNS.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2.4.1 Data Acquision BDTNS</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../3_Vocabularies/3_Lexical_and_Literary_Vocabularies.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3. Lexical and Literary Vocabularies</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Niek Veldhuis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Niek Veldhuis<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

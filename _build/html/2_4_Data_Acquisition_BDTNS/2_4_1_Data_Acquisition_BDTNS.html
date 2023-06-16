@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.4.1 Data Acquision BDTNS &#8212; Computational Assyriology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,47 +20,63 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.4.2 Build Sign Search for BDTNS" href="2_4_2_Build_Sign_Search.html" />
     <link rel="prev" title="2.4 BDTNS" href="2_4_0_Data_Acquisition_BDTNS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -67,10 +85,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Computational Assyriology</h1>
@@ -79,16 +99,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Welcome to Computational Assyriology
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to Computational Assyriology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_Preliminaries/1_Introduction.html">
    1. Introduction
@@ -213,96 +234,182 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/2_4_Data_Acquisition_BDTNS/2_4_1_Data_Acquisition_BDTNS.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_4_Data_Acquisition_BDTNS/2_4_1_Data_Acquisition_BDTNS.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_4_Data_Acquisition_BDTNS/2_4_1_Data_Acquisition_BDTNS.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_4_Data_Acquisition_BDTNS/2_4_1_Data_Acquisition_BDTNS.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_4_Data_Acquisition_BDTNS/2_4_1_Data_Acquisition_BDTNS.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/2_4_Data_Acquisition_BDTNS/2_4_1_Data_Acquisition_BDTNS.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-packages-and-create-directory">
    2.4.1.0 Import Packages and create directory
@@ -411,24 +518,148 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2.4.1 Data Acquision BDTNS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-packages-and-create-directory">
+   2.4.1.0 Import Packages and create directory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-bdtns-data-files">
+   2.4.1.1 Get BDTNS Data Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bdtns-catalog">
+   2.4.1.2 BDTNS Catalog
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bdtns-transliterations">
+   2.4.1.3 BDTNS Transliterations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-the-transliteration-file-as-a-list">
+     2.4.1.3.1 Read the Transliteration File as a List
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#split-data-into-fields">
+     2.4.1.3.2 Split Data into Fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-dataframe">
+     2.4.1.3.3 Create DataFrame
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-ogsl-compliant">
+   2.4.1.4 Make OGSL compliant
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dealing-with-x-values">
+     2.4.1.4.1 Dealing with x-values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-unambiguous-x-values">
+     2.4.1.4.2 Step 1: Unambiguous x-values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-remaining-x-values">
+     2.4.1.4.3 Step 2: Remaining x-values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-index-numbers">
+     2.4.1.4.4 Step 3: Index Numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#errors">
+     2.4.1.4.5 Errors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#helpful-variables-lists-and-dictionaries">
+     2.4.1.4.6 Helpful Variables, Lists, and Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-main-function">
+     2.4.1.4.7 The Main Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-the-function">
+     2.4.1.4.8 Apply the Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-for-remaining-x-signs">
+     2.4.1.4.9 Check for Remaining X-signs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save">
+   2.4.1.5 Save
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pickle-for-future-use">
+     2.4.1.5.1 Pickle for Future Use
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dump-in-json-format-for-distribution">
+     2.4.1.5.2 Dump in JSON Format for Distribution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="data-acquision-bdtns">
-<span id="id1"></span><h1>2.4.1 Data Acquision BDTNS<a class="headerlink" href="#data-acquision-bdtns" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-acquision-bdtns">
+<span id="id1"></span><h1>2.4.1 Data Acquision BDTNS<a class="headerlink" href="#data-acquision-bdtns" title="Permalink to this headline">#</a></h1>
 <p>Goal of this notebook is to transform <a class="reference external" href="http://bdtns.filol.csic.es/">BDTNS</a> data into a structured format that clearly distinguishes between text and non-text (such as line numbers) and that, for the text part, follows as much as possible the standards of the Oracc Global Sign List (<a class="reference external" href="http://oracc.org/ogsl">OGSL</a>). In section <a class="reference internal" href="2_4_2_Build_Sign_Search.html#id1"><span class="std std-ref">2.4.2</span></a> we will use this structured data to build a search engine that is independent of sign readings (that is, searching for <strong>sukkal</strong>, <strong>sugal₇</strong> or <strong>luh</strong> will all yield the same results). The search engine will serve as an example of the potential power of mashing two independent projects.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>A similar search engine was developed by Marc Endesfelder for his <a class="reference external" href="https://corpus.writing-sumerian.assyriologie.uni-muenchen.de/">Writing Sumerian</a> project.</p>
-</div>
-<div class="section" id="import-packages-and-create-directory">
-<h2>2.4.1.0 Import Packages and create directory<a class="headerlink" href="#import-packages-and-create-directory" title="Permalink to this headline">¶</a></h2>
+</aside>
+<section id="import-packages-and-create-directory">
+<h2>2.4.1.0 Import Packages and create directory<a class="headerlink" href="#import-packages-and-create-directory" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>requests: for communicating with a server over the internet</p></li>
 <li><p>pandas: data analysis and manipulation; dataframes</p></li>
@@ -456,9 +687,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="get-bdtns-data-files">
-<h2>2.4.1.1 Get BDTNS Data Files<a class="headerlink" href="#get-bdtns-data-files" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="get-bdtns-data-files">
+<h2>2.4.1.1 Get BDTNS Data Files<a class="headerlink" href="#get-bdtns-data-files" title="Permalink to this headline">#</a></h2>
 <p>For the time being, the data are downloaded in Zipped format from the <a class="reference external" href="https://github.com/niekveldhuis/compass">Compass</a> repository.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -488,9 +719,9 @@
 {"model_id": "02af11c50ebc4b6ab1320ac842f1db3f", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="bdtns-catalog">
-<h2>2.4.1.2 BDTNS Catalog<a class="headerlink" href="#bdtns-catalog" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="bdtns-catalog">
+<h2>2.4.1.2 BDTNS Catalog<a class="headerlink" href="#bdtns-catalog" title="Permalink to this headline">#</a></h2>
 <p>Extract the files from the ZIP and transform the catalog file into a Pandas data frame.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -650,11 +881,11 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="bdtns-transliterations">
-<h2>2.4.1.3 BDTNS Transliterations<a class="headerlink" href="#bdtns-transliterations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="read-the-transliteration-file-as-a-list">
-<h3>2.4.1.3.1 Read the Transliteration File as a List<a class="headerlink" href="#read-the-transliteration-file-as-a-list" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="bdtns-transliterations">
+<h2>2.4.1.3 BDTNS Transliterations<a class="headerlink" href="#bdtns-transliterations" title="Permalink to this headline">#</a></h2>
+<section id="read-the-transliteration-file-as-a-list">
+<h3>2.4.1.3.1 Read the Transliteration File as a List<a class="headerlink" href="#read-the-transliteration-file-as-a-list" title="Permalink to this headline">#</a></h3>
 <p>The transliteration file is already extracted from the file BDTNS.zip and is located in the directory <code class="docutils literal notranslate"><span class="pre">../BDTNS_data/</span></code>.</p>
 <div class="dropdown tip admonition">
 <p class="admonition-title">utf-8, utf-8-sig, vertical tabs</p>
@@ -668,7 +899,7 @@
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">.splitlines()</span></code> method takes both the vertical tab and the regular newline character as a line separator. The <code class="docutils literal notranslate"><span class="pre">.read()</span></code> method puts the entire file in memory and is therefore less efficient - if possible, use the <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> method.</p>
 </div>
-<p>Empty lines and lines filled with spaces or tabs only will cause trouble downstream and are removed. Also removed are lines that consist of sequences of ‘=’ signs (those are used to demarcate one text from the next.</p>
+<p>Empty lines and lines filled with spaces or tabs only will cause trouble downstream and are removed. Also removed are lines that consist of sequences of ‘=’ signs (those are used to demarcate one document from the next).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;../BDTNS_data/QUERY_transliterations.txt&#39;</span>
@@ -709,9 +940,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="split-data-into-fields">
-<h3>2.4.1.3.2 Split Data into Fields<a class="headerlink" href="#split-data-into-fields" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="split-data-into-fields">
+<h3>2.4.1.3.2 Split Data into Fields<a class="headerlink" href="#split-data-into-fields" title="Permalink to this headline">#</a></h3>
 <p>Each data type (text ID, line number, comments, etc.) is made into a separate column of a data frame. Each row of that data frame represents one line in an Ur III document.</p>
 <p>First, the code looks for lines that begin with 6 digits, for instance:</p>
 <blockquote>
@@ -758,9 +989,9 @@
 {"model_id": "7349d26ef9504f0ba3f8e17c8e3b056c", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="create-dataframe">
-<h3>2.4.1.3.3 Create DataFrame<a class="headerlink" href="#create-dataframe" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="create-dataframe">
+<h3>2.4.1.3.3 Create DataFrame<a class="headerlink" href="#create-dataframe" title="Permalink to this headline">#</a></h3>
 <p>The list <code class="docutils literal notranslate"><span class="pre">lines</span></code> is now a list of lists which can be transformed into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame. The DataFrame will have <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (for ‘Not a Number’) in all cases where a field is empty. <code class="docutils literal notranslate"><span class="pre">NaN</span></code>s are treated by Python as a numerical data type and will throw errors when trying to apply a string function. Therefore, all <code class="docutils literal notranslate"><span class="pre">NaN</span></code>s are replaced by the empty string with the <code class="docutils literal notranslate"><span class="pre">fillna()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -890,22 +1121,22 @@
 <p>1162517 rows × 5 columns</p>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="make-ogsl-compliant">
-<h2>2.4.1.4 Make OGSL compliant<a class="headerlink" href="#make-ogsl-compliant" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="make-ogsl-compliant">
+<h2>2.4.1.4 Make OGSL compliant<a class="headerlink" href="#make-ogsl-compliant" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="http://oracc.org/ogsl">OGSL</a> is the ORACC Global Sign List, which lists for each sign its possible readings. <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> compliance opens the possibility to search or compare by sign <em>name</em> rather than sign value. For instance, one may search for the sequence “aga₃ kug-sig₁₇” (golden tiara) and find a line reading “gin₂ ku₃-GI”.</p>
 <p>The main steps towards <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> compliance are:</p>
 <ul class="simple">
 <li><p>add sign names to x-values</p></li>
 <li><p>replace regular numbers by index numbers in sign values</p></li>
 </ul>
-<div class="section" id="dealing-with-x-values">
-<span id="id2"></span><h3>2.4.1.4.1 Dealing with x-values<a class="headerlink" href="#dealing-with-x-values" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+<section id="dealing-with-x-values">
+<span id="id2"></span><h3>2.4.1.4.1 Dealing with x-values<a class="headerlink" href="#dealing-with-x-values" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Molina, Manuel and Such-Gutiérrez, Marcos, On Terms for Cutting Plants and Noses in Ancient Sumer: <em>Journal of Near Eastern Studies</em> 63 (2004) 1-16</p>
-</div>
+</aside>
 <p>A peculiarity of the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> data set is the way so-called x-values are represented. In Assyriology, x-values are sign readings that have not (yet) received a conventional index number. For instance, the (very common) word  for “to cut (reeds)” is written either with the sign <strong>zi</strong> or with the sign <strong>SIG₇</strong>. Based on the distribution of those spellings (<strong>SIG₇</strong> only in Umma, <strong>zi</strong> elsewhere), M. Molina and M. Such-Guttiérez (2004)[^2] concluded that both spellings write the same word /<strong>zi</strong>/. On that basis the new reading <strong>/zi/</strong> for the sign <strong>SIG₇</strong> was introduced (and is now commonly accepted among Sumerologists). In such cases one may transliterate <strong>ziₓ(SIG₇)</strong> where the SIG₇ between brackets is the name of the sign transliterated as <strong>ziₓ</strong> (and thus the principle of a one-to-one mapping of a transliterated token to a cuneiform sign is maintained). In the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> export file this is represented as follows:</p>
 <blockquote>
 <div><p>o. 2     gi ziX-a 12 sar-⌈ta⌉ (=SIG7)		cut reed per 12 <em>sar</em> of field</p>
@@ -937,16 +1168,16 @@
 </ul>
 <p>Both of these steps are included in the function <code class="docutils literal notranslate"><span class="pre">ogsl_v()</span></code>, that is applied to every row of the DataFrame. In addition, this function will replace index numbers (such as the 7 in sig7) with Unicode index numbers (sig₇), leaving alone numbers that represent quantities (<strong>7 sila3</strong> becomes <strong>7 sila3</strong>, not <strong>₇ sila₃</strong>).</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">ogsl_v()</span></code> to run properly and efficiently, a number of translation tables, dictionaries, and compiled <a class="reference external" href="https://www.regular-expressions.info/">regular expressions</a> are defined before the function is called.</p>
-</div>
-<div class="section" id="step-1-unambiguous-x-values">
-<h3>2.4.1.4.2 Step 1: Unambiguous x-values<a class="headerlink" href="#step-1-unambiguous-x-values" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-1-unambiguous-x-values">
+<h3>2.4.1.4.2 Step 1: Unambiguous x-values<a class="headerlink" href="#step-1-unambiguous-x-values" title="Permalink to this headline">#</a></h3>
 <p>Some x-values are always resolved in the same way. Thus, ziX is always ziₓ(IGI&#64;g), hirinX is always hirinₓ(KWU318), and gurX is always gurₓ(|ŠE.KIN|). In some cases, x-values have been assigned an index number in <a class="reference external" href="http://oracc.org/ogsl">OGSL</a>. In those cases (nigarₓ = nigar; nemurₓ(PIRIG.TUR) = nemur₂; nagₓ(GAZ) = nag₃; and pešₓ(ŠU.PEŠ5) = peš₁₄) the appropriate index number should be added and the sign name ignored.</p>
 <p>A dictionary of such unambiguous x-values (<code class="docutils literal notranslate"><span class="pre">xvalues</span></code>) has as its key the x-value as represented in <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> in lower case (‘zix’) and as its value the index ₓ plus the appropriate sign name (‘ₓ(IGI&#64;g)’) in <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> format.</p>
 <div class="dropdown tip admonition">
 <p class="admonition-title">OGSL Sign Names</p>
 <p><a class="reference external" href="http://oracc.org/ogsl">OGSL</a> uses a set of standard sign names. What is represented as SIG7 in <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> has the name IGI&#64;g in <a class="reference external" href="http://oracc.org/ogsl">OGSL</a>. In IGI&#64;g the element &#64;g is an abbreviation for the (Akkadian) word <em>gunû</em>, which was used by ancient scribal scholars to describe a sign with extra hatching. IGI: 𒅆; IGI&#64;g: 𒅊. Other such markers are &#64;t (<em>tenû</em>) for a slanted sign and &#64;š (<em>šeššig</em>) for a sign with additional wedges inscribed. The ‘times’ sign (×) is used to describe a sign that consists of a container sign, inscribed with another sign (as in |KA×GAR| 𒅥). In <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> such compound signs are demarcated by pipes.</p>
 </div>
-<p>The substitution is done with a somewhat complex <a class="reference external" href="https://www.regular-expressions.info/">regular expression</a>, that looks as follows:</p>
+<p>The substitution is done with a somewhat complex expression, that looks as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">xv</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">xvalues</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="s1">&#39;X&#39;</span><span class="p">),</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -958,22 +1189,22 @@
 </div>
 <p>This matches any sequence of one or more (<code class="docutils literal notranslate"><span class="pre">+</span></code>) word-characters (<code class="docutils literal notranslate"><span class="pre">\w</span></code>; this includes letters from the English alphabet as well as special characters such as š, ṣ, and ṭ, the digits 0-9, and the underscore) and/or flags (such as square brackets etc.; see below: Flags), followed by a capital X. This regex will match <code class="docutils literal notranslate"><span class="pre">ziX</span></code>, <code class="docutils literal notranslate"><span class="pre">zahX</span></code>, or <code class="docutils literal notranslate"><span class="pre">ušurX</span></code>, but also <code class="docutils literal notranslate"><span class="pre">[za]hX</span></code>, etc. It does not match ‘KA×X’, ‘ X’, or ‘x-X’, because the characters × (for ‘times’) the hyphen and the space are neither word characters nor flags.</p>
 <p>Special case: <strong>mu-kuX</strong>. There are multiple possible solutions for <strong>kuX</strong>, including kuₓ(LIL) or kuₓ(KWU147), but the very frequent form <strong>mu-kuX</strong> is always to be resolved <strong>mu-kuₓ(DU)</strong>. The regular expression <code class="docutils literal notranslate"><span class="pre">xv</span></code> in the preceding does not match hyphens and thus it will never find the key <code class="docutils literal notranslate"><span class="pre">mu-kuX</span></code> in the dictionary <code class="docutils literal notranslate"><span class="pre">xvalues</span></code>. However, this expression (meaning ‘delivery’) is so frequent that it makes sense to deal with it separately, rather than depend on the sign names in the <code class="docutils literal notranslate"><span class="pre">comments</span></code> column. The expression <strong>mu-kuX</strong> therefore, has its own line in the function.</p>
-</div>
-<div class="section" id="step-2-remaining-x-values">
-<h3>2.4.1.4.3 Step 2: Remaining x-values<a class="headerlink" href="#step-2-remaining-x-values" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-2-remaining-x-values">
+<h3>2.4.1.4.3 Step 2: Remaining x-values<a class="headerlink" href="#step-2-remaining-x-values" title="Permalink to this headline">#</a></h3>
 <p>For the remaining x-values (many of them ambiguous) we will copy the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> sign name, found in the <code class="docutils literal notranslate"><span class="pre">comments</span></code> column, to the x-value. For instance, <strong>ummu₃</strong> is |A.EDIN.LAL|, but the sign complex has many variants, all rendered <strong>ummuX</strong>: <a class="reference external" href="http://EDIN.A.SU">EDIN.A.SU</a>, A.EDIN, A.EDIN.A.LAL, EDIN, etc. The code will result in ummuₓ(|A.EDIN.SU|), ummuₓ(|A.EDIN|), ummuₓ(|A.EDIN.LAL|), ummuₓ(EDIN), etc. Compound signs are put between pipes (|A.EDIN.SU|), according to <a class="reference external" href="http://oracc.org/ogsl">OGSL</a> conventions.</p>
 <p>In this step the code will naively replace the capital X by the index ₓ, followed by the first word in the <code class="docutils literal notranslate"><span class="pre">comments</span></code> column. This will result in errors if there are more such x-values in a single line - but because we have already dealt with many such values in the preceding, that risk is not very high. The code will test that the capital X does in fact follow a sign reading (as in ziX), and is not an illegible sign (as in KA×X, or simply X). This is done with a <a class="reference external" href="https://www.regular-expressions.info/">regular expression</a> using a so-called “positive lookbehind” (?&lt;=), to see if the preceding character is a letter. The regular expression for a capital ‘X’ preceded by any letter valid in Sumerian or Akkadian, is compiled in the variable <code class="docutils literal notranslate"><span class="pre">lettersX</span></code> in order to speed up the process (see below: Letters).</p>
-</div>
-<div class="section" id="step-3-index-numbers">
-<h3>2.4.1.4.4 Step 3: Index Numbers<a class="headerlink" href="#step-3-index-numbers" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="step-3-index-numbers">
+<h3>2.4.1.4.4 Step 3: Index Numbers<a class="headerlink" href="#step-3-index-numbers" title="Permalink to this headline">#</a></h3>
 <p>In a third step all sign reading index numbers (as in ‘du11’) are replaced by Unicode index numbers (‘du₁₁’). Regular numbers that express quantities should not be affected. This is done with a regular expression that finds a character, valid in Sumerian or Akkadian transcription, immediately followed by one or more digits. If such a match is found, the string is translated, replacing any digit by its corresponding index number.</p>
-</div>
-<div class="section" id="errors">
-<h3>2.4.1.4.5 Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="errors">
+<h3>2.4.1.4.5 Errors<a class="headerlink" href="#errors" title="Permalink to this headline">#</a></h3>
 <p>Inevitably, each of the steps in dealing with x-values may introduce its own errors. It is likely, moreover, that there are more x-values not treated here, or that there will be more x-values in a future version of the <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> data. The dictionary of x-values below can be adjusted to deal with those situations.</p>
-</div>
-<div class="section" id="helpful-variables-lists-and-dictionaries">
-<h3>2.4.1.4.6 Helpful Variables, Lists, and Dictionaries<a class="headerlink" href="#helpful-variables-lists-and-dictionaries" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="helpful-variables-lists-and-dictionaries">
+<h3>2.4.1.4.6 Helpful Variables, Lists, and Dictionaries<a class="headerlink" href="#helpful-variables-lists-and-dictionaries" title="Permalink to this headline">#</a></h3>
 <p>A number of lists, dictionaries, and variables (including compiled regular expressions) are defined before the main function is called.</p>
 <p>The list <code class="docutils literal notranslate"><span class="pre">flags</span></code> enumerates characters like square brackets, half-brackets and exclamation marks that may appear in a sign reading in  in <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a>. The list is used in two ways. First, it is used in compiling the regular expression <code class="docutils literal notranslate"><span class="pre">xv</span></code> that will match any sign reading that ends in a capital X (see below). Second, it is used to create a table in which each flag corresponds to <code class="docutils literal notranslate"><span class="pre">None</span></code>. The <code class="docutils literal notranslate"><span class="pre">maketrans()</span></code> function is a specialized function that prepares a table that is understood by the <code class="docutils literal notranslate"><span class="pre">translate()</span></code> command. The command <code class="docutils literal notranslate"><span class="pre">translate(table)</span></code> is used in the function <code class="docutils literal notranslate"><span class="pre">ogsl_v()</span></code> (see below) to ignore any flag.</p>
 <p>The <a class="reference external" href="https://www.regular-expressions.info/">regular expression</a> <code class="docutils literal notranslate"><span class="pre">xv</span></code> matches a sequence of one or more characters, immediately followed by a capital <code class="docutils literal notranslate"><span class="pre">X</span></code>. The characters allowed in the sequence are “word” characters (represented by <code class="docutils literal notranslate"><span class="pre">\w</span></code>), as well as the flags. Word characters are implemented slightly differently in different programs that use regular expressions. In Python it includes the English letters of the alphabet, as well as special characters such as ṭ, ṣ, and š, but also digits (0-9) and the underscore. The <code class="docutils literal notranslate"><span class="pre">escape()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">re</span></code> library supplies the proper escape character for characters in the <code class="docutils literal notranslate"><span class="pre">flags</span></code> variable that otherwise have a special function in regular expressions. For instance, the question mark, which is included in the flags, means ‘zero or one time’ in a regular expression. In order to match the literal question mark it should be represented as <code class="docutils literal notranslate"><span class="pre">\?</span></code> - the <code class="docutils literal notranslate"><span class="pre">escape()</span></code> funcion takes care of that.</p>
@@ -1009,9 +1240,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-main-function">
-<h3>2.4.1.4.7 The Main Function<a class="headerlink" href="#the-main-function" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-main-function">
+<h3>2.4.1.4.7 The Main Function<a class="headerlink" href="#the-main-function" title="Permalink to this headline">#</a></h3>
 <p>The function <code class="docutils literal notranslate"><span class="pre">ogsl_v()</span></code> takes one row of the DataFrame at the time and goes through three separate steps, as discussed above (unambiguous x-values, other x-values, sign index numbers).</p>
 <p>In each of these steps the function uses one or more of the tables, dictionaries, and compiled regular expressions created above.</p>
 <div class="cell docutils container">
@@ -1040,9 +1271,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="apply-the-function">
-<h3>2.4.1.4.8 Apply the Function<a class="headerlink" href="#apply-the-function" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="apply-the-function">
+<h3>2.4.1.4.8 Apply the Function<a class="headerlink" href="#apply-the-function" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">ogsl_v</span></code> function is now applied to each row (<code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">1</span></code>) in the DataFrame. Since the DataFrame currently has more than 1.1 million rows (lines) the function may take a few minutes and a progress bar from the <code class="docutils literal notranslate"><span class="pre">tqdm</span></code> library is added.</p>
 <p>In the first cell of this notebook we initiated the use of tqdm with pandas with the line <code class="docutils literal notranslate"><span class="pre">tqdm.pandas()</span></code>. Instead of the regular <code class="docutils literal notranslate"><span class="pre">apply()</span></code> method from the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library we may now use <code class="docutils literal notranslate"><span class="pre">progress_apply()</span></code> to do the same thing as <code class="docutils literal notranslate"><span class="pre">apply()</span></code>, but with a progress bar.</p>
 <div class="cell docutils container">
@@ -1056,9 +1287,9 @@
 {"model_id": "962aae904a6845fe8406c3a843737905", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="check-for-remaining-x-signs">
-<h3>2.4.1.4.9 Check for Remaining X-signs<a class="headerlink" href="#check-for-remaining-x-signs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="check-for-remaining-x-signs">
+<h3>2.4.1.4.9 Check for Remaining X-signs<a class="headerlink" href="#check-for-remaining-x-signs" title="Permalink to this headline">#</a></h3>
 <p>Any remaining capital X should indicate an illegible sign - or else the script has run into an inconsistency. Such errors may be caused by</p>
 <ul class="simple">
 <li><p>square brackets occuring immediately before X (as in gari[g]X).</p></li>
@@ -1191,13 +1422,13 @@
 <p>305 rows × 5 columns</p>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="save">
-<h2>2.4.1.5 Save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="save">
+<h2>2.4.1.5 Save<a class="headerlink" href="#save" title="Permalink to this headline">#</a></h2>
 <p>Finally, the newly created DataFrame with <a class="reference external" href="http://bdtns.filol.csic.es">BDTNS</a> data is saved in two ways. The <code class="docutils literal notranslate"><span class="pre">to_pickle()</span></code> function of the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library is used to created a pickle, a file that can be opened in a future session to recreate the DataFrame. Second, the DataFrame is saved in JSON format, a format that is more suitable for sharing with other researchers. Both files are saved in the <code class="docutils literal notranslate"><span class="pre">output</span></code> directory.</p>
-<div class="section" id="pickle-for-future-use">
-<span id="id3"></span><h3>2.4.1.5.1 Pickle for Future Use<a class="headerlink" href="#pickle-for-future-use" title="Permalink to this headline">¶</a></h3>
+<section id="pickle-for-future-use">
+<span id="id3"></span><h3>2.4.1.5.1 Pickle for Future Use<a class="headerlink" href="#pickle-for-future-use" title="Permalink to this headline">#</a></h3>
 <p>Pickle the DataFrame for future use.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1207,9 +1438,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dump-in-json-format-for-distribution">
-<h3>2.4.1.5.2 Dump in JSON Format for Distribution<a class="headerlink" href="#dump-in-json-format-for-distribution" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dump-in-json-format-for-distribution">
+<h3>2.4.1.5.2 Dump in JSON Format for Distribution<a class="headerlink" href="#dump-in-json-format-for-distribution" title="Permalink to this headline">#</a></h3>
 <p>And/or dump the DataFrame in <a class="reference external" href="https://www.json.org/">JSON</a> format to share the data with others.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1220,9 +1451,9 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1246,34 +1477,48 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="2_4_0_Data_Acquisition_BDTNS.html" title="previous page">2.4 BDTNS</a>
-    <a class='right-next' id="next-link" href="2_4_2_Build_Sign_Search.html" title="next page">2.4.2 Build Sign Search for BDTNS</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2_4_0_Data_Acquisition_BDTNS.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2.4 BDTNS</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="2_4_2_Build_Sign_Search.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.4.2 Build Sign Search for BDTNS</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Niek Veldhuis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Niek Veldhuis<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

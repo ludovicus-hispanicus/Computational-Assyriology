@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.1.4 ORACC JSON: Extended Parser &#8212; Computational Assyriology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,47 +20,63 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.2 Data Acquisition ETCSL" href="../2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.html" />
     <link rel="prev" title="2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser" href="2_1_3_basic_ORACC-JSON_parser.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -67,10 +85,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Computational Assyriology</h1>
@@ -79,16 +99,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Welcome to Computational Assyriology
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to Computational Assyriology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_Preliminaries/1_Introduction.html">
    1. Introduction
@@ -213,96 +234,182 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/niekveldhuis/compass/master?urlpath=tree/2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/niekveldhuis/compass/blob/master/2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/2_1_Data_Acquisition_ORACC/2_1_4_extended_ORACC-JSON_parser.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-packages">
    2.1.4.0 Import Packages
@@ -385,17 +492,115 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2.1.4 ORACC JSON: Extended Parser</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-packages">
+   2.1.4.0 Import Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminary-create-directories-download-projects">
+   2.1.4.1 Preliminary: Create Directories, Download Projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-extended-parse-text-json-function">
+   2.1.4.2 The extended
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     parse_text_json()
+    </span>
+   </code>
+   function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#call-the-parsejson-function-for-every-json-file">
+   2.1.4.3 Call the
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     parsejson()
+    </span>
+   </code>
+   function for every
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     JSON
+    </span>
+   </code>
+   file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structuring-pandas-dataframe">
+   2.1.4.4 Data Structuring: Pandas Dataframe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-line-id">
+   2.1.4.5 Create Line ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-by-line">
+   2.1.4.6 Group by Line
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternative-texts-in-normalized-transcription">
+   2.1.4.7 Alternative: Texts in Normalized Transcription
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-normalized-transcriptions">
+   2.1.4.8 Save Normalized Transcriptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-oracc-json-files">
+   2.1.4.9 Other ORACC JSON files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadata-json">
+     2.1.4.9.1 metadata.json
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexes-and-glossary">
+     2.1.4.9.2 Indexes and Glossary
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="oracc-json-extended-parser">
-<h1>2.1.4 ORACC JSON: Extended Parser<a class="headerlink" href="#oracc-json-extended-parser" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="oracc-json-extended-parser">
+<h1>2.1.4 ORACC JSON: Extended Parser<a class="headerlink" href="#oracc-json-extended-parser" title="Permalink to this headline">#</a></h1>
 <p>The basic <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> discussed in 2.1.3 captures only lemmatization data, it ignores line numbers, text breaks, and other types of information that are included in the JSON files. The basic <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> is good enough for a “Bag of Words” approach, which looks only at vocabulary frequency, ignoring word order. For many other types of analysis we do need to capture line numbers and text breaks. Such information is stored in “d” nodes in a level above the “l” node in the <code class="docutils literal notranslate"><span class="pre">cdl</span></code> hierarchy. Similarly, sentence identifiers (and other discourse units) are stored in “c” nodes. The <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function can easily be enhanced to capture various types of such meta-data storing them in a dictionary called <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>. This dictionary is updated whenever the <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function encounters a relevant node. Each lemma that the function returns receives the current meta-data from <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -412,8 +617,8 @@
 <span class="n">words_df</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">projects</span><span class="p">)</span>  
 </pre></div>
 </div>
-<div class="section" id="import-packages">
-<h2>2.1.4.0 Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h2>
+<section id="import-packages">
+<h2>2.1.4.0 Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>pandas: data analysis and manipulation; dataframes</p></li>
 <li><p>ipywidgets: user interface (enter project names)</p></li>
@@ -440,9 +645,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="preliminary-create-directories-download-projects">
-<h2>2.1.4.1 Preliminary: Create Directories, Download Projects<a class="headerlink" href="#preliminary-create-directories-download-projects" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="preliminary-create-directories-download-projects">
+<h2>2.1.4.1 Preliminary: Create Directories, Download Projects<a class="headerlink" href="#preliminary-create-directories-download-projects" title="Permalink to this headline">#</a></h2>
 <p>The code for creating directories (<code class="docutils literal notranslate"><span class="pre">jsonzip</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code>), and selecting and downloading the relevant <a class="reference external" href="http://oracc.org">ORACC</a> projects is the same as in previous notebooks and is not commented upon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -453,10 +658,10 @@
 </div>
 </div>
 <p>Input Project Names</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Subprojects must be listed separately, they are not included in the main project. A subproject is named <code class="docutils literal notranslate"><span class="pre">[PROJECT]/[SUBPROJECT]</span></code>, for instance <code class="docutils literal notranslate"><span class="pre">saao/saa01</span></code>.</p>
-</div>
+</aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projects</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Textarea</span><span class="p">(</span>
@@ -481,14 +686,14 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-extended-parse-text-json-function">
-<h2>2.1.4.2 The extended <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function<a class="headerlink" href="#the-extended-parse-text-json-function" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-extended-parse-text-json-function">
+<h2>2.1.4.2 The extended <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function<a class="headerlink" href="#the-extended-parse-text-json-function" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function is identical in structure with the function of that same name in section 2.1.3, but it fetches more data.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">id_word</span></code> string <code class="docutils literal notranslate"><span class="pre">Q000039.76.2</span></code> the number <code class="docutils literal notranslate"><span class="pre">76</span></code> is not a line number strictly speaking but an object reference within the text object. Things like horizontal rulings, columns, and breaks also get object references - which allows us to keep all those elements in their correct order.</p>
-</div>
+</aside>
 <p>First, we need to capture data elements that are potentially relevant for more than one lemma, for instance line numbers. Those are stored in the dictionary <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>, and subsequently retrieved for each lemma. Human legible line numbers are found in the field <code class="docutils literal notranslate"><span class="pre">label</span></code>. The field <code class="docutils literal notranslate"><span class="pre">field</span></code> is used primarily in lexical texts. For the field abbreviations and their meanings, see the <a class="reference external" href="http://oracc.museum.upenn.edu/doc/help/editinginatf/lexicaltexts/index.html">documentation</a>. The value of <code class="docutils literal notranslate"><span class="pre">field</span></code> may look like <code class="docutils literal notranslate"><span class="pre">wp</span></code> (word or phrase), or <code class="docutils literal notranslate"><span class="pre">sg</span></code> (Sign) and is found under the JSON key <code class="docutils literal notranslate"><span class="pre">subtype</span></code> after a <code class="docutils literal notranslate"><span class="pre">field-start</span></code> entry. The value is copied to the <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> dictionary (under the key <code class="docutils literal notranslate"><span class="pre">field</span></code>), but this key is removed from <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> as soon as the parser encounters a <code class="docutils literal notranslate"><span class="pre">field-end</span></code> value (with the <code class="docutils literal notranslate"><span class="pre">pop()</span></code> method). The great majority of lemmas have no field attribute - the key is “popped” so that it does not inadvertently get copied to all subsequent lemmas. Administrative text may have a <code class="docutils literal notranslate"><span class="pre">field</span></code> indicating that a word belongs to a year name (<code class="docutils literal notranslate"><span class="pre">yn</span></code>). This may be used, for instance, to remove year names in analyzing the vocabulary of the Ur III corpus.</p>
 <p>As in the basic parser, when the parser encounters an <code class="docutils literal notranslate"><span class="pre">f</span></code> key, the contents of that key (the lemmatization of a word) are copied to <code class="docutils literal notranslate"><span class="pre">lemma</span></code> (a dictionary). To this dictionary several fields are added: <code class="docutils literal notranslate"><span class="pre">id_word</span></code> (stored in the node <code class="docutils literal notranslate"><span class="pre">ref</span></code>), <code class="docutils literal notranslate"><span class="pre">label</span></code> (form <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>) and <code class="docutils literal notranslate"><span class="pre">id_text</span></code> (also from <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>).</p>
 <p>Instead of an <code class="docutils literal notranslate"><span class="pre">f</span></code> key (which signals a word) the parser may also encounter a key <code class="docutils literal notranslate"><span class="pre">strict</span></code>. If <code class="docutils literal notranslate"><span class="pre">strict</span></code> has the value ‘1’ (a string), this signals some kind of interruption in the text. That can be a break, a blank line, or a horizontal ruling. This is indicated in a restricted vocabulary (hence the node <code class="docutils literal notranslate"><span class="pre">strict</span></code>) in the nodes <code class="docutils literal notranslate"><span class="pre">extent</span></code>, <code class="docutils literal notranslate"><span class="pre">scope</span></code> and <code class="docutils literal notranslate"><span class="pre">state</span></code>, giving metatextual data about the condition of the object; they capture the number of broken lines or columns and similar information. This data is captured as if it were a lemma, and <code class="docutils literal notranslate"><span class="pre">id_word</span></code> and <code class="docutils literal notranslate"><span class="pre">id_text</span></code> are added.</p>
@@ -532,9 +737,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="call-the-parsejson-function-for-every-json-file">
-<h2>2.1.4.3 Call the <code class="docutils literal notranslate"><span class="pre">parsejson()</span></code> function for every <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file<a class="headerlink" href="#call-the-parsejson-function-for-every-json-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="call-the-parsejson-function-for-every-json-file">
+<h2>2.1.4.3 Call the <code class="docutils literal notranslate"><span class="pre">parsejson()</span></code> function for every <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file<a class="headerlink" href="#call-the-parsejson-function-for-every-json-file" title="Permalink to this headline">#</a></h2>
 <p>The code in this cell will go through two nested loops - essentially the same as the code discussed in 2.1.3 (the basic parser). The main difference is the creation of a dictionary <code class="docutils literal notranslate"><span class="pre">meta_d</span></code> that is given as a second argument to <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code>. Initially, this dictionary is empty. The value of the key <code class="docutils literal notranslate"><span class="pre">id_text</span></code> is updated in the main process every time a new JSON file is opened and sent to the <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> function itself will change values or add new keys, depending on the information found while iterating through the JSON file. When a new lemma row is created, <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code> will supply data such as <code class="docutils literal notranslate"><span class="pre">id_text</span></code>, <code class="docutils literal notranslate"><span class="pre">label</span></code> and (potentially) other information from <code class="docutils literal notranslate"><span class="pre">meta_d</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -569,9 +774,9 @@
 {"model_id": "4d17df336cfd480e8408ecf4635bfbe6", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</div>
-<div class="section" id="data-structuring-pandas-dataframe">
-<h2>2.1.4.4 Data Structuring: Pandas Dataframe<a class="headerlink" href="#data-structuring-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="data-structuring-pandas-dataframe">
+<h2>2.1.4.4 Data Structuring: Pandas Dataframe<a class="headerlink" href="#data-structuring-pandas-dataframe" title="Permalink to this headline">#</a></h2>
 <p>The code in this section is essentially the same as the code for data structuring in 2.1.3 (basic parser).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -961,9 +1166,9 @@
 <p>25415 rows × 4 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="create-line-id">
-<h2>2.1.4.5 Create Line ID<a class="headerlink" href="#create-line-id" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="create-line-id">
+<h2>2.1.4.5 Create Line ID<a class="headerlink" href="#create-line-id" title="Permalink to this headline">#</a></h2>
 <p>In order to arrange the data in line-by-line format we need to create a line ID that will be added as a new field to each word in the DataFrame. The <code class="docutils literal notranslate"><span class="pre">id_word</span></code> captured by the extended parser has the format <code class="docutils literal notranslate"><span class="pre">ID_TEXT.ID_LINE.ID_WORD</span></code>, for instance <code class="docutils literal notranslate"><span class="pre">P338628.4.3</span></code>:  the third word of line 4 of <a class="reference external" href="http://oracc.org/cams/gkab/P338628.4.3">P338628</a> (an astronomical fragment edited in <a class="reference external" href="http://oracc.org/cams/gkab">GKAB</a>). Note that “4” in this case refers to the very first line of the fragment. The number “4” is not a traditional line number, but rather a reference number that is used to keep lines, breaks, rulings, etc. in their proper place. We can split the ID and keep only the middle part, using the <code class="docutils literal notranslate"><span class="pre">split()</span></code> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ids</span> <span class="o">=</span> <span class="n">id_line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </pre></div>
@@ -972,7 +1177,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;P338628&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Python indexes start at 0, so that <code class="docutils literal notranslate"><span class="pre">ids[1]</span></code> refers to the second element of the list <code class="docutils literal notranslate"><span class="pre">ids</span></code>.</p>
 <p>The second element (<code class="docutils literal notranslate"><span class="pre">ids[1]</span></code>) is the one we need (<code class="docutils literal notranslate"><span class="pre">'4'</span></code>). Note that this <code class="docutils literal notranslate"><span class="pre">'4'</span></code>is a string (between quotation marks), not a number. We need to change the data type into integer in order to arrange the lines properly (as string <code class="docutils literal notranslate"><span class="pre">'4'</span></code> comes between <code class="docutils literal notranslate"><span class="pre">'39'</span></code> and <code class="docutils literal notranslate"><span class="pre">'40'</span></code>). Putting all of this together we can create the proper <code class="docutils literal notranslate"><span class="pre">id_line</span></code> field with a list comprehension as follows:</p>
@@ -983,13 +1188,13 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It would be more straightforward to derive <code class="docutils literal notranslate"><span class="pre">id_line</span></code> from the key <code class="docutils literal notranslate"><span class="pre">ref</span></code> in a <code class="docutils literal notranslate"><span class="pre">d</span></code> node in the <code class="docutils literal notranslate"><span class="pre">parse_text_json()</span></code>function:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-                  <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;line-start&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;ref&quot;</span><span class="p">:</span> <span class="s2">&quot;Q000376.26&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;n&quot;</span><span class="p">:</span> <span class="s2">&quot;26&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;26&quot;</span>
-<span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">&quot;node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;line-start&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Q000376.26&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">&quot;n&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>	<span class="k">if</span> <span class="n">JSONobject</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;line-start&quot;</span><span class="p">:</span>
@@ -999,7 +1204,7 @@
 </div>
 <p>Although this works for most of the JSON files, not all <code class="docutils literal notranslate"><span class="pre">d</span></code> nodes of type <code class="docutils literal notranslate"><span class="pre">line-start</span></code> include the key <code class="docutils literal notranslate"><span class="pre">ref</span></code> and therefore the route through <code class="docutils literal notranslate"><span class="pre">id_word</span></code> is safer.</p>
 </div>
-</div>
+</aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words_df</span><span class="p">[</span><span class="s1">&#39;id_line&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">wordid</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">wordid</span> <span class="ow">in</span> <span class="n">words_df</span><span class="p">[</span><span class="s1">&#39;id_word&#39;</span><span class="p">]]</span>
@@ -1007,9 +1212,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="group-by-line">
-<h2>2.1.4.6 Group by Line<a class="headerlink" href="#group-by-line" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="group-by-line">
+<h2>2.1.4.6 Group by Line<a class="headerlink" href="#group-by-line" title="Permalink to this headline">#</a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">words_df</span></code> dataframe each word has a separate row. In order to change this into a line-by-line representation we use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> function, using <code class="docutils literal notranslate"><span class="pre">id_text</span></code>, <code class="docutils literal notranslate"><span class="pre">id_line</span></code> and <code class="docutils literal notranslate"><span class="pre">label</span></code> fields as the sorting arguments.</p>
 <p>The fields that are aggregated are <code class="docutils literal notranslate"><span class="pre">lemma</span></code>, <code class="docutils literal notranslate"><span class="pre">extent</span></code>, <code class="docutils literal notranslate"><span class="pre">scope</span></code>, and <code class="docutils literal notranslate"><span class="pre">state</span></code>. The fields <code class="docutils literal notranslate"><span class="pre">extent</span></code>, <code class="docutils literal notranslate"><span class="pre">scope</span></code>, and <code class="docutils literal notranslate"><span class="pre">state</span></code> represent data on the number of broken lines. For instance, the notation <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">lines</span> <span class="pre">missing</span></code> in the <a class="reference external" href="http://oracc.org">ORACC</a> edition will result in <code class="docutils literal notranslate"><span class="pre">extent</span> <span class="pre">=</span> <span class="pre">&quot;4&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">scope</span> <span class="pre">=</span> <span class="pre">&quot;line&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">=</span> <span class="pre">&quot;missing&quot;</span></code> (note that the value of <code class="docutils literal notranslate"><span class="pre">extent</span></code> is a string and will be <code class="docutils literal notranslate"><span class="pre">&quot;n&quot;</span></code> if the number of missing lines or columns is unknown).</p>
 <p>If your data does not have the fields <code class="docutils literal notranslate"><span class="pre">extent</span></code>, <code class="docutils literal notranslate"><span class="pre">scope</span></code>, and <code class="docutils literal notranslate"><span class="pre">state</span></code> the code below will fail - simply delete the lines that reference those fields.</p>
@@ -1169,9 +1374,9 @@
 <p>5557 rows × 7 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="alternative-texts-in-normalized-transcription">
-<h2>2.1.4.7 Alternative: Texts in Normalized Transcription<a class="headerlink" href="#alternative-texts-in-normalized-transcription" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="alternative-texts-in-normalized-transcription">
+<h2>2.1.4.7 Alternative: Texts in Normalized Transcription<a class="headerlink" href="#alternative-texts-in-normalized-transcription" title="Permalink to this headline">#</a></h2>
 <p>This code (which is useful mostly for Akkadian texts) will produce a text in normalized transcription, essentially following the pattern of the preceding. Before grouping words into documents, we need to take care of words that have not been normalized (for instance because of breakage), using the field <code class="docutils literal notranslate"><span class="pre">form</span></code>. The new field <code class="docutils literal notranslate"><span class="pre">norm1</span></code> now has the normalized form of the word if it is available; if not it has the raw transliteration (without flags or breakage information).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1282,9 +1487,9 @@
 <p>264 rows × 2 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="save-normalized-transcriptions">
-<h2>2.1.4.8 Save Normalized Transcriptions<a class="headerlink" href="#save-normalized-transcriptions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="save-normalized-transcriptions">
+<h2>2.1.4.8 Save Normalized Transcriptions<a class="headerlink" href="#save-normalized-transcriptions" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">texts_norm</span></code> DataFrame has one complete document in normalized transcription in each row. The code below saves each row as a separate <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file, named after the document’s ID.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1296,20 +1501,20 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="other-oracc-json-files">
-<h2>2.1.4.9 Other ORACC JSON files<a class="headerlink" href="#other-oracc-json-files" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="other-oracc-json-files">
+<h2>2.1.4.9 Other ORACC JSON files<a class="headerlink" href="#other-oracc-json-files" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="http://oracc.org/doc/opendata/json/index.html">Open Data/JSON</a> page in <a class="reference external" href="http://oracc.org">ORACC</a> explains in some detail the various other types of JSON files that are available. This section will briefly point out a few files that may be of use and that can be parsed with the techniques discussed above.</p>
-<div class="section" id="metadata-json">
-<h3>2.1.4.9.1 metadata.json<a class="headerlink" href="#metadata-json" title="Permalink to this headline">¶</a></h3>
+<section id="metadata-json">
+<h3>2.1.4.9.1 metadata.json<a class="headerlink" href="#metadata-json" title="Permalink to this headline">#</a></h3>
 <p>The file <code class="docutils literal notranslate"><span class="pre">metadata.json</span></code> provides information about composite texts (which witnesses belong to which composite text) and about formats: <code class="docutils literal notranslate"><span class="pre">atf</span></code> (available in transliteration), <code class="docutils literal notranslate"><span class="pre">lem</span></code> (files with lemmatization) and <code class="docutils literal notranslate"><span class="pre">tr-en</span></code> (files with English translation). In projects that work with other translation languages one may find <code class="docutils literal notranslate"><span class="pre">tr-de</span></code> (for German), <code class="docutils literal notranslate"><span class="pre">tr-hun</span></code> (for Hungarian), etc. The file <code class="docutils literal notranslate"><span class="pre">metadata.json</span></code> may be useful, for instance, if you intent to parse all the files of a project that have lemmatization, but ignore those that do not. One may pull out the list <code class="docutils literal notranslate"><span class="pre">formats[&quot;lem&quot;]</span></code> to get all the relevant text IDs.</p>
-</div>
-<div class="section" id="indexes-and-glossary">
-<h3>2.1.4.9.2 Indexes and Glossary<a class="headerlink" href="#indexes-and-glossary" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="indexes-and-glossary">
+<h3>2.1.4.9.2 Indexes and Glossary<a class="headerlink" href="#indexes-and-glossary" title="Permalink to this headline">#</a></h3>
 <p>The Index and Glossary JSON files reproduce the indexes used by <a class="reference external" href="http://oracc.org/doc/search/searchingcorpora/index.html">ORACC Search</a> and the project glossaries in JSON format. Indexes and glossaries may be used, among other things, to create searches beyond the scope of a line (for instance: search for <code class="docutils literal notranslate"><span class="pre">lugal</span></code> and <code class="docutils literal notranslate"><span class="pre">dalla</span></code> in the same text), a feature that is not currently available in standard <a class="reference external" href="http://oracc.org">ORACC</a> search. How to build such a search engine is a topic not discussed in this study.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1333,34 +1538,48 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="2_1_3_basic_ORACC-JSON_parser.html" title="previous page">2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser</a>
-    <a class='right-next' id="next-link" href="../2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.html" title="next page">2.2 Data Acquisition ETCSL</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2_1_3_basic_ORACC-JSON_parser.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2.1.3 Extract Lemmatization from ORACC JSON: Basic Parser</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../2_2_Data_Acquisition_ETCSL/2_2_Data_Acquisition_ETCSL.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.2 Data Acquisition ETCSL</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Niek Veldhuis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Niek Veldhuis<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

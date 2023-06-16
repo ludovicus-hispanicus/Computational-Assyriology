@@ -58,7 +58,7 @@
 
 import requests
 import pandas as pd
-pd.set_option('display.max_rows', None)
+#pd.set_option('display.max_rows', None)
 from tqdm.auto import tqdm  # tqdm.auto will activate the notebook version when called from a notebook
 tqdm.pandas() # initiate progress bars for pandas
 import os

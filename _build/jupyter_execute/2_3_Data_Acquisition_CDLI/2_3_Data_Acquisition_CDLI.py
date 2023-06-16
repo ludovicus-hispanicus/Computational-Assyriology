@@ -39,15 +39,11 @@
 # 
 # There are various ways in which one can acquire [CDLI](http://cdli.ucla.edu) data. The website includes a [Downloads](https://cdli.ucla.edu/?q=downloads) page where one can get access to a daily clone of the catalog and the entire set of transliterations. Alternatively, one can perform a search on the [CDLI](http://cdli.ucla.edu) search page and request a download of the data (transliteration only or catalog and transliteration data) by pushing a button. This works well for a few or several dozens of texts, but not for very large data sets. The present notebook will download the [CDLI](http://cdli.ucla.edu) files from the daily clone on [Github](https://github.com/cdli-gh/data).
 # 
-# Currently, the set of transliterations is offered in one big file, named `cdliatf_unblocked.atf `. The catalog is split into two files because of file-size limitations at [Github](http://github.com); they are named `cdli_catalogue_1of2.csv` and `cdli_catalogue_2of2.csv`, respectively. The files need to be concatenated before they can be used.
-# 
 # ### 2.3.2.0 Import Packages
 # * requests: for communicating with a server over the internet
 # * tqdm: for creating progress bars
 # * pandas: data analysis and manipulation; dataframes
-# * BeautifulSoup: web scraping
 # * os: for basic Operating System operations (such as creating a directory)
-# * shutil: file operations (such as concatenating files)
 
 # In[1]:
 
@@ -55,9 +51,7 @@
 import requests
 from tqdm.auto import tqdm
 import pandas as pd
-from bs4 import BeautifulSoup
 import os
-import shutil
 
 
 # ### 2.3.2.1 Create Download Directory
@@ -69,49 +63,22 @@ import shutil
 os.makedirs('cdlidata', exist_ok = True)
 
 
-# ### 2.3.2.2 Retrieve File Names
-# 
-# ```{margin}
-# For BeautifulSoup, see chapter 4 [Data Collection](https://melaniewalsh.github.io/Intro-Cultural-Analytics/Data-Collection/Web-Scraping-Part1.html#beautifulsoup) in Melanie Walsh's [Introduction to Cultural Analytics and Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html).
-# ```
-# 
-# The code first retrieves the names of the files that are offered for download on the CDLI [download](https://github.com/cdli-gh/data) page on GitHub. The script requests the HTML of the download page and uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) (a package for web scraping) to retrieve all the links from the page. This includes the file names, but also all kinds of other links.
-# 
-# Scraping the file names (rather than simply listing them) is useful, because in the future the data may have to be split in more than two files.
+# ### 2.3.2.2 Download
+# The download code in this cell is essentially identical with the code in section [2.1.0](2.1.0): Download ORACC JSON. Because of the size of the files, and depending on the speed of your computer and internet connection the downloading process can take some time.
 
 # In[3]:
 
 
-download_page = "https://github.com/cdli-gh/data"
-r = requests.get(download_page)
-html = r.text
-soup = BeautifulSoup(html)
-links = soup.find_all('a')       # retrieve all html anchors, which define links
-files = set()
-for link in links:
-    f = link.get('href')        # from the anchors, retrieve the URLs
-    files.add(f)
-files = {f for f in files if 'master/cdli' in f}  # filter out the relevant URLs
-files = {f.split('/')[-1] for f in files} # only keep the file names (without the path)
-files
-
-
-# ### 2.3.2.3 Download
-# The download code in this cell is essentially identical with the code in section [2.1.0](2.1.0): Download ORACC JSON. Because of the size of the files, and depending on the speed of your computer and internet connection the downloading process can take some time.
-
-# In[4]:
-
-
 CHUNK = 1024
-for file in files:
-    url = f"https://raw.github.com/cdli-gh/data/master/{file}"
-    target = f'cdlidata/{file}'
+urls = ['https://github.com/cdli-gh/data/raw/master/cdli_cat.csv', 'https://github.com/cdli-gh/data/raw/master/cdliatf_unblocked.atf']
+for url in urls:
+    target = url.split('/')[-1]
     with requests.get(url, stream=True) as r:
         if r.status_code == 200:
             total_size = int(r.headers.get('content-length', 0))
-            tqdm.write(f'Saving {url} as cdlidata/{file}')
-            t=tqdm(total=total_size, unit='B', unit_scale=True, desc = file)
-            with open(target, 'wb') as f:
+            tqdm.write(f'Saving {url} as cdlidata/{target}')
+            t=tqdm(total=total_size, unit='B', unit_scale=True, desc = target)
+            with open(f'cdlidata/{target}', 'wb') as f:
                 for c in r.iter_content(chunk_size=CHUNK):
                     t.update(len(c))
                     f.write(c)
@@ -119,28 +86,14 @@ for file in files:
             print(f"{url} does not exist.")
 
 
-# ### 2.3.2.4. Concatenate the Catalogue Files
-# The catalogue files are concatenated, using a utility from the `shutil` package. The new, concatenated, file is called `catalogue.csv`.
+# ### 2.3.2.3 Load in a Pandas data frame
+# 
+# The field `id_text` holds the text ID number as a string, without the preceding "P" and without padding zeroes to the left. The text ID "P001023" is thus represented as 1023. When reading the data into `pandas`, chances are that the data type of `id_text` is interpreted as integer. The function `zfill()` adds the padding zeros to create a six-digit number as a string. 
 
 # In[5]:
 
 
-filenames = [f for f in files if "cdli_catalogue" in f]
-filenames.sort()  # to make sure we read cdli_catalogue_1of2.csv first.
-with open('cdlidata/catalogue.csv','wb') as concatenated_file:
-    for file in filenames:
-        with open(f'cdlidata/{file}','rb') as one_file:
-            shutil.copyfileobj(one_file, concatenated_file)
-
-
-# ### 2.3.2.4 Load in a Pandas data frame
-# 
-# The field `id_text` holds the text ID number as a string, without the preceding "P" and without padding zeroes to the left. The text ID "P001023" is thus represented as 1023. When reading the data into `pandas`, chances are that the data type of `id_text` is interpreted as integer. The function `zfill()` adds the padding zeros to create a six-digit number as a string. 
-
-# In[6]:
-
-
-cat = pd.read_csv('cdlidata/catalogue.csv', engine='python', error_bad_lines=False).fillna('')
+cat = pd.read_csv('cdlidata/cdli_cat.csv', engine='python').fillna('')
 cat['id_text'] = ["P" + str(no).zfill(6) for no in cat['id_text']]
 cat
 
@@ -156,7 +109,7 @@ cat
 # 
 # The result is a of list lines with all the transliteration data of the Early Dynastic IIIa texts in [CDLI](http://cdli.ucla.edu).
 
-# In[7]:
+# In[6]:
 
 
 ed3a = cat.loc[cat["period"].str[:7] == "ED IIIa"]
@@ -186,7 +139,7 @@ for line in tqdm(lines):
 # 
 # The lines are read in reverse order, so that when the script encounters an '&P' line (as in '&P212416 = AAICAB 1/1, pl. 008, 19282-439'), this signals that all the lines of a text have been read and that the document can be added to the list `docs`. (When reading the lines in regular order - taking the '&P' line as signaling the end of the previous document - one needs to separately save the last document, because there is no '&P' line anymore to indicate that the text is complete).
 
-# In[8]:
+# In[7]:
 
 
 docs = []
@@ -211,7 +164,7 @@ ed3a_df = pd.DataFrame(docs)
 ed3a_df.columns = ["id_text", "transliteration"]
 
 
-# In[9]:
+# In[8]:
 
 
 ed3a_df
